@@ -1,31 +1,43 @@
 """
+=========================================================
 MODULO: matrix_input.py
 
-DESCRIPCION:
-Modulo que contiene el panel de entrada de datos. Permite seleccionar el tamano
-de la matriz, escribir valores, cargar ejemplos, ejecutar analisis, exportar PDF
-y mostrar historial.
+DESCRIPTION:
+    El módulo que contiene el panel de entrada de datos. Permite seleccionar el tamano
+    de la matriz, escribir valores, cargar ejemplos, ejecutar análisis, exportar PDF
+    y mostrar historial.
 
-PROPOSITO:
-Separar la captura de datos de la ventana principal y del motor matematico.
+PURPOSE:
+    Separar la captura de datos de la ventana principal y del motor matemático.
 
-ENTRADAS:
-Valores escritos por el usuario en una tabla 2x2 o 3x3.
-Ejemplos cargados desde data/matrix_examples.json.
+INPUT:
+    - Valores escritos por el usuario en una tabla 2x2 o 3x3.
+    - Ejemplos cargados desde data/matrix_examples.json.
 
-SALIDAS:
-Matriz de NumPy emitida hacia la ventana principal mediante una senal.
+OUTPUT:
+    - Matriz de NumPy emitida hacia la ventana principal mediante una señal.
 
-TEMAS RELACIONADOS CON ESTE EJEMPLO:
-- Entrada de datos
-- Validacion previa
-- Senales de PyQt6
-- Matrices 2x2 y 3x3
+TOPICS RELATED TO THIS MODULE:
+    - Entrada de datos
+    - Validación previa
+    - Señales de PyQt6
+    - Matrices 2x2 y 3x3
 
-AUTORES:
-Isabella Mejía Urueña
-Laura Sofía Restrepo Ardila
+AUTHORS:
+    Isabella Mejía Urueña
+    Laura Sofía Restrepo Ardila
+
+VERSION:
+    3.0
+
+CREATION DATE:
+    2026-05-15
+
+LAST UPDATE: 
+    2026-05-23
+=========================================================
 """
+
 from __future__ import annotations
 
 import json
@@ -52,14 +64,14 @@ from src.config.settings import DATA_DIR
 
 class MatrixInputWidget(QFrame):
     """
-    Representa:
+    Represents:
     panel izquierdo donde el usuario ingresa la matriz y controla acciones.
 
-    Entradas:
-        parent -> Componente visual padre opcional.
+    Input:
+        - parent -> Componente visual padre opcional.
 
-    Salida:
-        Componente visual que emite matrices y solicitudes de exportacion.
+    Output:
+        - Componente visual que emite matrices y solicitudes de exportación.
     """
 
     analyze_requested = pyqtSignal(object)
@@ -67,17 +79,17 @@ class MatrixInputWidget(QFrame):
 
     def __init__(self, parent: QWidget | None = None) -> None:
         """
-        Calcula:
-        inicializacion del panel de entrada y carga de ejemplos.
+        Calculate:
+        inicialización del panel de entrada y carga de ejemplos.
 
-        Entradas:
-            parent -> Componente visual padre opcional.
+        Input:
+            - parent -> Componente visual padre opcional.
 
-        Salida:
+        Output:
             No retorna valores. Construye el panel y deja una matriz 2x2 lista.
 
-        Restricciones:
-            Debe ejecutarse dentro de una aplicacion PyQt6.
+        Restrictions:
+            Debe ejecutarse dentro de una aplicación PyQt6.
         """
         super().__init__(parent)
         self.setObjectName("SidePanel")
@@ -89,16 +101,16 @@ class MatrixInputWidget(QFrame):
 
     def _build_ui(self) -> None:
         """
-        Calcula:
-        construccion visual de tabla, botones, selector de ejemplos e historial.
+        Calculate:
+        construcción visual de tabla, botones, selector de ejemplos e historial.
 
-        Entradas:
-            No recibe parametros.
+        Input:
+            - No recibe parámetros.
 
-        Salida:
-            No retorna valores. Agrega widgets al panel.
+        Output:
+            - No retorna valores. Agrega widgets al panel.
 
-        Restricciones:
+        Restrictions:
             Solo crea interfaz; no analiza la matriz.
         """
         layout = QVBoxLayout(self)
@@ -145,17 +157,17 @@ class MatrixInputWidget(QFrame):
 
     def _connect_signals(self) -> None:
         """
-        Calcula:
+        Calculate:
         conexion entre botones, selectores y funciones internas.
 
-        Entradas:
-            No recibe parametros.
+        Input:
+            - No recibe parametros.
 
-        Salida:
-            No retorna valores. Activa eventos de la interfaz.
+        Output:
+            - No retorna valores. Activa eventos de la interfaz.
 
-        Restricciones:
-            Las senales solo funcionan mientras la aplicacion PyQt6 este activa.
+        Restrictions:
+            Las señales solo funcionan mientras la aplicacion PyQt6 este activa.
         """
         self.size_combo.currentIndexChanged.connect(self._on_size_changed)
         self.example_combo.currentIndexChanged.connect(self._on_example_changed)
@@ -165,16 +177,16 @@ class MatrixInputWidget(QFrame):
 
     def _load_examples(self) -> list[dict]:
         """
-        Calcula:
+        Calculate:
         lectura de matrices de ejemplo desde un archivo JSON.
 
-        Entradas:
-            No recibe parametros. Usa data/matrix_examples.json.
+        Input:
+            - No recibe parámetros. Usa data/matrix_examples.json.
 
-        Salida:
-            Lista de diccionarios con nombre, tamano y matriz.
+        Output:
+            - Lista de diccionarios con nombre, tamano y matriz.
 
-        Restricciones:
+        Restrictions:
             Si el archivo no existe, retorna una lista vacia.
         """
         path = Path(DATA_DIR) / "matrix_examples.json"
@@ -185,17 +197,17 @@ class MatrixInputWidget(QFrame):
 
     def _populate_examples(self) -> None:
         """
-        Calcula:
+        Calculate:
         llenado del selector de ejemplos.
 
-        Entradas:
-            No recibe parametros. Usa self.examples.
+        Input:
+            - No recibe parámetros. Usa self.examples.
 
-        Salida:
+        Output:
             No retorna valores. Inserta opciones en el QComboBox.
 
-        Restricciones:
-            Debe llamarse despues de cargar los ejemplos.
+        Restrictions:
+            Debe llamarse después de cargar los ejemplos.
         """
         self.example_combo.blockSignals(True)
         self.example_combo.clear()
@@ -206,33 +218,33 @@ class MatrixInputWidget(QFrame):
 
     def _on_size_changed(self) -> None:
         """
-        Calcula:
-        cambio del tamano de la tabla segun seleccion del usuario.
+        Calculate:
+        cambio del tamaño de la tabla según selección del usuario.
 
-        Entradas:
-            No recibe parametros. Lee el indice del selector de tamano.
+        Input:
+            - No recibe parámetros. Lee el índice del selector de tamaño.
 
-        Salida:
-            No retorna valores. Ajusta la tabla a 2x2 o 3x3.
+        Output:
+            - No retorna valores. Ajusta la tabla a 2x2 o 3x3.
 
-        Restricciones:
-            Solo permite los tamanos definidos en el combo: 2x2 y 3x3.
+        Restrictions:
+            Solo permite los tamaños definidos en el combo: 2x2 y 3x3.
         """
         self._resize_matrix(2 if self.size_combo.currentIndex() == 0 else 3)
 
     def _resize_matrix(self, size: int) -> None:
         """
-        Calcula:
+        Calculate:
         redimensionamiento de la tabla de entrada.
 
-        Entradas:
-            size -> Tamano de la matriz, 2 o 3.
+        Input:
+            - size -> Tamaño de la matriz, 2 o 3.
 
-        Salida:
-            No retorna valores. Ajusta filas, columnas y celdas.
+        Output:
+            - No retorna valores. Ajusta filas, columnas y celdas.
 
-        Restricciones:
-            Esta funcion esta disenada para size = 2 o size = 3.
+        Restrictions:
+            Esta función esta diseñada para size = 2 o size = 3.
         """
         self.table.setRowCount(size)
         self.table.setColumnCount(size)
@@ -245,16 +257,16 @@ class MatrixInputWidget(QFrame):
 
     def _on_example_changed(self) -> None:
         """
-        Calcula:
+        Calculate:
         carga de un ejemplo seleccionado en la tabla.
 
-        Entradas:
-            No recibe parametros. Lee el ejemplo actual del QComboBox.
+        Input:
+            - No recibe parámetros. Lee el ejemplo actual del QComboBox.
 
-        Salida:
-            No retorna valores. Escribe los valores del ejemplo en la tabla.
+        Output:
+            - No retorna valores. Escribe los valores del ejemplo en la tabla.
 
-        Restricciones:
+        Restrictions:
             El ejemplo debe contener claves name, size y matrix.
         """
         example = self.example_combo.currentData()
@@ -270,20 +282,20 @@ class MatrixInputWidget(QFrame):
 
     def read_matrix(self) -> np.ndarray:
         """
-        Calcula:
-        conversion de las celdas de la tabla en una matriz de NumPy.
+        Calculate:
+        conversión de las celdas de la tabla en una matriz de NumPy.
 
-        Formula usada:
+        Fórmula usada:
         matrix[row][col] = float(texto_de_celda)
 
-        Entradas:
-            No recibe parametros. Lee los valores escritos en la tabla.
+        Input:
+            - No recibe parámetros. Lee los valores escritos en la tabla.
 
-        Salida:
+        Output:
             Matriz de NumPy con valores decimales.
 
-        Restricciones:
-            Cada celda debe contener un numero valido. Se aceptan comas como
+        Restrictions:
+            Cada celda debe contener un número válido. Se aceptan comas como
             separador decimal y se convierten a punto.
         """
         size = self.table.rowCount()
@@ -299,36 +311,36 @@ class MatrixInputWidget(QFrame):
 
     def _emit_analysis(self) -> None:
         """
-        Calcula:
-        emision de la matriz capturada hacia la ventana principal.
+        Calculate:
+        emisión de la matriz capturada hacia la ventana principal.
 
-        Entradas:
-            No recibe parametros. Usa read_matrix().
+        Input:
+            - No recibe parámetros. Usa read_matrix().
 
-        Salida:
-            No retorna valores. Emite la senal analyze_requested.
+        Output:
+            - No retorna valores. Emite la señal analyze_requested.
 
-        Restricciones:
-            Si alguna celda no es numerica, Python genera error de conversion.
+        Restrictions:
+            Si alguna celda no es numérica, Python genera error de conversión.
         """
         self.analyze_requested.emit(self.read_matrix())
 
     def clear_matrix(self) -> None:
         """
-        Calcula:
+        Calculate:
         limpieza de la tabla de entrada.
 
-        Formula usada:
+        Fórmula usada:
         cada celda visible = 0
 
-        Entradas:
-            No recibe parametros.
+        Input:
+            - No recibe parámetros.
 
-        Salida:
-            No retorna valores. Escribe cero en todas las celdas visibles.
+        Output:
+            - No retorna valores. Escribe cero en todas las celdas visibles.
 
-        Restricciones:
-            Solo modifica las celdas visibles segun el tamano actual.
+        Restrictions:
+            Solo modifica las celdas visibles según el tamaño actual.
         """
         for row in range(self.table.rowCount()):
             for col in range(self.table.columnCount()):
@@ -336,16 +348,16 @@ class MatrixInputWidget(QFrame):
 
     def add_history_item(self, label: str) -> None:
         """
-        Calcula:
-        adicion visual de un registro al historial.
+        Calculate:
+        adición visual de un registro al historial.
 
-        Entradas:
-            label -> Texto con fecha, determinante y riesgo.
+        Input:
+            - label -> Texto con fecha, determinante y riesgo.
 
-        Salida:
-            No retorna valores. Inserta el registro al inicio de la lista.
+        Output:
+            - No retorna valores. Inserta el registro al inicio de la lista.
 
-        Restricciones:
+        Restrictions:
             El historial visual se reinicia al cerrar la aplicacion; el historial
             permanente se guarda en outputs/matrices/history.json.
         """
