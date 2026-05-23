@@ -15,7 +15,7 @@ matrix -> Matriz de NumPy.
 OUTPUT:
 Matriz transpuesta A^T.
 
-TOPICS RELATED TO THIS EXAMPLE::
+TOPICS RELATED TO THIS EXAMPLE:
     - Transpuesta de matrices
     - Simetria matricial
     - Funciones con retorno
