@@ -1,28 +1,39 @@
 """
+========================================
 MODULO: validations.py
 
-DESCRIPCION:
-Modulo encargado de validar que la matriz ingresada por el usuario cumpla las
-condiciones necesarias para ser analizada.
+DESCRIPTION:
+    Módulo encargado de válidar que la matriz ingresada por el usuario cumpla las
+    condiciones necesarias para ser analizada.
 
-PROPOSITO:
-Evitar errores matematicos y de interfaz antes de ejecutar el motor de analisis.
+PURPOSE:
+    Evitar errores matemáticos y de interfaz antes de ejecutar el motor de análisis.
 
-ENTRADAS:
-matrix -> Matriz de NumPy capturada desde la interfaz.
+INPUT:
+    - matrix -> Matriz de NumPy capturada desde la interfaz.
 
-SALIDAS:
-Tupla con un valor booleano y un mensaje de error si aplica.
+OUTPUT:
+    - Tupla con un valor booleano y un mensaje de error si aplica.
 
-TEMAS RELACIONADOS CON ESTE EJEMPLO:
-- Validacion de datos
-- Restricciones de dominio
-- Matrices cuadradas
-- Control de errores
+TOPICS RELATED TO THIS MODULO:
+    - Validación de datos
+    - Restricciones de dominio
+    - Matrices cuadradas
+    - Control de errores
 
-AUTORES:
-Isabella Mejía Urueña
-Laura Sofía Restrepo Ardila
+AUTHORS:
+    Isabella Mejía Urueña
+    Laura Sofía Restrepo Ardila
+
+VERSION:
+    3.O
+
+CREATION DATE:
+    2026-05-15
+
+LAST UPDATE:
+    2026-05-23
+========================================
 """
 
 from __future__ import annotations
@@ -32,8 +43,8 @@ import numpy as np
 
 def validate_matrix(matrix: np.ndarray) -> tuple[bool, str]:
     """
-    Calcula:
-    verificacion de condiciones para analizar una matriz.
+    Calculate:
+    verificación de condiciones para analizar una matriz.
 
     Reglas usadas:
     - La matriz debe ser cuadrada.
@@ -41,15 +52,15 @@ def validate_matrix(matrix: np.ndarray) -> tuple[bool, str]:
     - Todos los valores deben ser finitos.
     - La matriz no puede ser completamente cero.
 
-    Entradas:
-        matrix -> Matriz ingresada por el usuario.
+    Input:
+        - matrix -> Matriz ingresada por el usuario.
 
-    Salida:
-        (True, "") si es valida.
-        (False, mensaje) si no cumple alguna regla.
+    Output:
+        - (True, "") si es valida.
+        - (False, mensaje) si no cumple alguna regla.
 
-    Restricciones:
-        No realiza calculos estructurales; solo valida el dominio de entrada.
+    Restrictions:
+        No realiza cálculos estructurales; solo válida el dominio de entrada.
     """
     if matrix.ndim != 2 or matrix.shape[0] != matrix.shape[1]:
         return False, "La matriz debe ser cuadrada."
