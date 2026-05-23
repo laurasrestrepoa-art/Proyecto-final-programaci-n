@@ -1,31 +1,42 @@
 """
+========================================
 MODULO: main.py
 
-DESCRIPCION:
-Archivo principal del proyecto StructuraLab. Contiene la funcion que inicia la
-aplicacion de escritorio y carga la ventana principal desarrollada con PyQt6.
+DESCRIPTION:
+    Archivo principal del proyecto StructuraLab. Contiene la función que inicia la
+    aplicación de escritorio y carga la ventana principal desarrollada con PyQt6.
 
-PROPOSITO:
-Servir como punto de entrada del taller. Desde este archivo se ejecuta el
-programa completo sin mezclar la interfaz con los calculos matematicos.
+PURPOSE:
+    Servir como punto de entrada del taller. Desde este archivo se ejecuta el
+    programa completo sin mezclar la interfaz con los cálculos matemáticos.
 
-ENTRADAS:
-No recibe datos matematicos directos. Usa los argumentos del sistema operativo
-para iniciar la aplicacion grafica.
+INPUT:
+    - No recibe datos matematicos directos. Usa los argumentos del sistema operativo
+    para iniciar la aplicación gráfica.
 
-SALIDAS:
-Retorna un codigo entero de finalizacion. Si la aplicacion abre correctamente,
-devuelve el codigo generado por PyQt6; si faltan dependencias, devuelve 1.
+OUTPUT:
+    - Retorna un codigo entero de finalizacion. Si la aplicación abre correctamente,
+    devuelve el codigo generado por PyQt6; si faltan dependencias, devuelve 1.
 
-TEMAS RELACIONADOS CON ESTE EJEMPLO:
-- Creacion de modulo principal
-- Importacion de modulos externos
-- Inicializacion de interfaz grafica
-- Manejo basico de errores
+TOPICS RELATED TO THIS MODULO
+    - Creación de módulo principal
+    - Importación de módulos externos
+    - Inicialización de interfaz gráfica
+    - Manejo básico de errores
 
-AUTORES:
-Isabella Mejía Urueña
-Laura Sofía Restrepo Ardila
+AUTHORS:
+    Isabella Mejía Urueña
+    Laura Sofía Restrepo Ardila
+
+VERSION:
+    3.O
+
+CREATION DATE:
+    2026-05-15
+
+LAST UPDATE:
+    2026-05-23
+========================================
 """
 
 from __future__ import annotations
@@ -35,21 +46,21 @@ import sys
 
 def main() -> int:
     """
-    Calcula:
-    inicio del ciclo grafico de la aplicacion.
+    Calculate:
+    inicio del ciclo gráfico de la aplicación.
 
-    Formula usada:
+    Fórmula usada:
     app = QApplication(sys.argv)
     ventana = MainWindow()
     salida = app.exec()
 
-    Entradas:
+    Input:
         sys.argv -> argumentos del sistema usados por PyQt6.
 
-    Salida:
-        Codigo entero de finalizacion de la aplicacion.
+    Output:
+        Codigo entero de finalización de la aplicación.
 
-    Restricciones:
+    Restrictions:
         Requiere tener instaladas las librerias indicadas en requirements.txt.
     """
     try:
