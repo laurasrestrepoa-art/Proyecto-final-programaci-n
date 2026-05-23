@@ -20,8 +20,9 @@ TEMAS RELACIONADOS CON ESTE EJEMPLO:
 - Matrices cuadradas
 - Control de errores
 
-AUTOR:
-Laura y equipo de trabajo
+AUTORES:
+Isabella Mejía Urueña
+Laura Sofía Restrepo Ardila
 """
 
 from __future__ import annotations
