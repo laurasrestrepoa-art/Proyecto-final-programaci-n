@@ -1,6 +1,6 @@
 """
 ========================================
-MODULO: trace.py
+MODULE: trace.py
 
 DESCRIPTION:
     Este Módulo es el encargado de calcular la traza de una matriz cuadrada, es decir, la suma
@@ -16,7 +16,7 @@ INPUT:
 OUTPUT:
     - Traza de la matriz como número decimal.
 
-TOPICS RELATED TO THIS MODULO:
+TOPICS RELATED TO THIS MODULE:
     - Funciones matemáticas
     - Diagonal principal
     - Retorno de valores
@@ -45,7 +45,7 @@ import numpy as np
 def calculate_trace(matrix: np.ndarray) -> float:
     """
     Calculate:
-    traza(A) = a11 + a22 + ... + ann
+    Traza(A) = a11 + a22 + ... + ann
 
     Input:
         matrix -> Matriz cuadrada A.
