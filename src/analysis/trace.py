@@ -1,18 +1,18 @@
 """
-MODULO: trace.py
+SCRIPT: trace.py
 
-DESCRIPCION:
+DESCRIPTION:
 Modulo encargado de calcular la traza de una matriz cuadrada, es decir, la suma
 de los elementos ubicados en la diagonal principal.
 
-PROPOSITO:
+PURPOSE:
 Complementar el analisis matricial mostrando una medida global de rigidez
 asociada a los terminos diagonales de la matriz.
 
-ENTRADAS:
+INPUT:
 matrix -> Matriz cuadrada de NumPy.
 
-SALIDAS:
+OUTPUT:
 Traza de la matriz como numero decimal.
 
 TEMAS RELACIONADOS CON ESTE EJEMPLO:
