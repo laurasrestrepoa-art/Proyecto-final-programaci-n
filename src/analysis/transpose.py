@@ -1,29 +1,39 @@
 """
-MODULO: transpose.py
+SCRIPT: transpose.py
 
-DESCRIPCION:
-Modulo encargado de calcular la matriz transpuesta. La transpuesta cambia filas
+DESCRIPTION:
+Este Módulo es el encargado de calcular la matriz transpuesta. La transpuesta cambia filas
 por columnas y permite revisar simetria de la matriz.
 
-PROPOSITO:
+PURPOSE:
 Apoyar el analisis de matrices de rigidez, donde la simetria suele ser una
 propiedad esperada en modelos estructurales idealizados.
 
-ENTRADAS:
+INPUT:
 matrix -> Matriz de NumPy.
 
-SALIDAS:
+OUTPUT:
 Matriz transpuesta A^T.
 
-TEMAS RELACIONADOS CON ESTE EJEMPLO:
-- Transpuesta de matrices
-- Simetria matricial
-- Funciones con retorno
-- Algebra lineal
+TOPICS RELATED TO THIS EXAMPLE::
+    - Transpuesta de matrices
+    - Simetria matricial
+    - Funciones con retorno
+    - Algebra lineal
 
-AUTORES:
+AUTHORS:
 Isabella Mejía Urueña
 Laura Sofía Restrepo Ardila
+
+VERSION:
+3.O
+
+CREATION DATE:
+    2026-05-15
+
+LAST UPDATE:
+    2026-05-23
+========================================
 """
 
 from __future__ import annotations
@@ -33,16 +43,16 @@ import numpy as np
 
 def calculate_transpose(matrix: np.ndarray) -> np.ndarray:
     """
-    Calcula:
+    Calculate:
     A^T, donde las filas de A pasan a ser columnas.
 
-    Entradas:
+    Input:
         matrix -> Matriz A.
 
-    Salida:
+    Output:
         Matriz transpuesta A^T.
 
-    Restricciones:
+    Restrictions:
         No requiere que la matriz sea invertible; solo necesita valores
         numericos.
     """
