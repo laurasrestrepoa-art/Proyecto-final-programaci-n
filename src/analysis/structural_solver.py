@@ -17,7 +17,7 @@ OUTPUT:
     - Objeto AnalysisResult con todos los resultados numéricos, gráficos e
       interpretativos requeridos por la interfaz y los reportes.
 
-TOPICS RELATED TO THIS EXAMPLE:
+TOPICS RELATED TO THIS MODULO:
     - Programación modular
     - Integración de funciones
     - Análisis matricial
