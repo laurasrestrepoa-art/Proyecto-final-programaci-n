@@ -1,6 +1,6 @@
-# StructuraLab
+# StructureLab
 
-StructuraLab es una aplicacion de escritorio para analisis estructural matricial
+StructureLab es una aplicacion de escritorio para analisis estructural matricial
 en ingenieria civil. Permite analizar matrices 2x2 y 3x3, calcular propiedades
 matematicas y mostrar una interpretación física con gráficas que permitan entender de un mejor forma el analisis.
 
@@ -53,9 +53,8 @@ pip install -r requirements.txt
 python main.py
 ```
 
-La interfaz puede programarse desde Visual Studio Code, pero si deseas editar la
-ventana de forma visual puedes usar Qt Designer. Este proyecto ya incluye la GUI
-hecha en codigo PyQt6, lista para ejecutar y modificar.
+El proyecto cuenta con una interfaz grafica desarrollada en PyQt6, organizada de forma modular para 
+separar la entrada de datos, el procesamiento matematico, la visualizacion y la exportacion de resultados.
 
 ## Pruebas
 
