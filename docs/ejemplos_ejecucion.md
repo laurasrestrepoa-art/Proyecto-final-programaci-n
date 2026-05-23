@@ -3,14 +3,14 @@
 Este documento presenta ejemplos de entrada y salida para evidenciar el
 funcionamiento del proyecto.
 
-## Como ejecutar el programa
+## Cómo ejecutar el programa
 
-Desde `cmd`, dentro de la carpeta principal:
+Después de descargar y descomprimir el proyecto, abre `cmd` dentro de la carpeta principal del proyecto.
+
+Luego ejecuta:
 
 ```cmd
-cd /d "C:\Users\LAURA\Desktop\Proyecto final programación"
 py main.py
-```
 
 Si es la primera vez en el computador:
 
@@ -19,18 +19,15 @@ py -m pip install -r requirements.txt
 py main.py
 ```
 
-## Como ejecutar las pruebas
+Y para las pruebas:
+
+```md
+## Cómo ejecutar las pruebas
+
+Desde la carpeta principal del proyecto, ejecuta:
 
 ```cmd
 py -B -m unittest discover tests
-```
-
-Salida esperada:
-
-```text
-Ran 4 tests
-OK
-```
 
 ## Ejemplo 1: matriz estable 2x2
 
