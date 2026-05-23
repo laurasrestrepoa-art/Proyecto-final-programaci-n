@@ -1,22 +1,22 @@
-# StructureLab
+# Proyecto final: StructureLab
 
-StructureLab es una aplicacion de escritorio para analisis estructural matricial
-en ingenieria civil. Permite analizar matrices 2x2 y 3x3, calcular propiedades
-matematicas y mostrar una interpretación física con gráficas que permitan entender de un mejor forma el analisis.
+Este proyecto fue realizado con el fin de aplicar conceptos de álgebra lineal y programación
+en Python al análisis estructural mediante matrices. Este programa permite ingresar matrices 
+2x2 y 3x3 para realizar diferentes operaciones matemáticas y visualizar los resultados 
+mediante gráficas, además de mostrar una interpretación de los resultados obtenidos.
 
-## Funcionalidades
 
-- Ingreso de matrices 2x2 o 3x3.
-- Calculo de determinante, traza, inversa, transpuesta, valores propios y
-  vectores propios.
-- Clasificacion de estabilidad, rigidez y condicion numerica.
-- Interpretacion estructural automatica en lenguaje de ingenieria.
-- Visualizacion de estructura, mapa de calor y modos vectoriales.
-- Exportacion de reportes PDF con resultados y graficas.
-- Historial local de analisis en `outputs/matrices/history.json`.
-- Pruebas automaticas para validar los modulos matematicos.
+## Funciones principales: 
 
-## Estructura
+- Ingreso de matrices 2x2 y 3x3.
+- Cálculo de determinante.
+- Obtención de la matriz inversa y transpuesta.
+- Cálculo de valores y vectores propios.
+- Visualización de gráficas y mapas de calor.
+- Generación de reportes en PDF.
+- Guardado básico del historial de análisis.
+
+## Estructura del proyecto:
 
 ```text
 StructuraLab/
@@ -37,34 +37,24 @@ StructuraLab/
 `-- README.md
 ```
 
-## Instalacion
+## Instalación:
 
-Se recomienda crear un entorno virtual:
-
+Primero, se deberá ingresar a la terminar y poner lo siguiente:
 ```bash
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## Ejecucion
+## Ejecución
 
 ```bash
 python main.py
 ```
 
-El proyecto cuenta con una interfaz grafica desarrollada en PyQt6, organizada de forma modular para 
-separar la entrada de datos, el procesamiento matematico, la visualizacion y la exportacion de resultados.
-
-## Pruebas
-
-```bash
-python -m unittest discover tests
-```
 
 
-## Nota importante
+### Nota:
 
-Este proyecto es academico. La interpretacion estructural es una aproximacion
-educativa basada en propiedades matriciales, no reemplaza un calculo profesional
-de ingenieria civil.
+Este proyecto fue creado con fines académicos, por tal razón la interpretación estructural es 
+una aproximación basada en propiedades matriciales y demás temas vistos en el àlgebra lineal.
