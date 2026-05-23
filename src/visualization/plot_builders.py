@@ -1,31 +1,42 @@
 """
+========================================
 MODULO: plot_builders.py
 
-DESCRIPCION:
-Modulo encargado de construir las graficas del proyecto usando Matplotlib:
-mapa de calor, estructura deformada, vectores propios 2D/3D y participacion
-modal.
+DESCRIPTION:
+    Módulo encargado de construir las gráficas del proyecto usando Matplotlib:
+    mapa de calor, estructura deformada, vectores propios 2D/3D y participación
+    modal.
 
-PROPOSITO:
-Separar la visualizacion grafica de los calculos matematicos y de la interfaz.
-Esto permite que las mismas graficas se usen en pantalla y en reportes PDF.
+PURPOSE:
+    Separar la visualización gráfica de los cálculos matemáticos y de la interfaz.
+    Esto permite que las mismas gráficas se usen en pantalla y en reportes PDF.
 
-ENTRADAS:
-result -> Objeto AnalysisResult con matriz, valores propios, vectores propios e
-intensidad nodal.
+INPUT:
+    - result -> Objeto AnalysisResult con matriz, valores propios, vectores propios e
+    intensidad nodal.
 
-SALIDAS:
-Figuras de Matplotlib listas para mostrarse o exportarse.
+OUTPUT:
+    - Figuras de Matplotlib listas para mostrarse o exportarse.
 
-TEMAS RELACIONADOS CON ESTE EJEMPLO:
-- Visualizacion de datos
-- Matplotlib
-- Vectores propios en 2D y 3D
-- Mapas de calor
+TOPICS RELATED TO THIS MODULO:
+    - Visualización de datos
+    - Matplotlib
+    - Vectores propios en 2D y 3D
+    - Mapas de calor
 
-AUTORES:
-Isabella Mejía Urueña
-Laura Sofía Restrepo Ardila
+AUTHORS:
+    Isabella Mejía Urueña
+    Laura Sofía Restrepo Ardila
+
+VERSION:
+    3.O
+
+CREATION DATE:
+    2026-05-15
+
+LAST UPDATE:
+    2026-05-23
+========================================
 """
 
 from __future__ import annotations
@@ -45,17 +56,17 @@ AXIS_COLOR = "#0f172a"
 
 def _apply_dark_theme(figure: Figure) -> None:
     """
-    Calcula:
-    aplicacion de colores oscuros a una figura.
+    Calculate:
+    aplicación de colores oscuros a una figura.
 
-    Entradas:
-        figure -> Figura de Matplotlib.
+    Input:
+        - figure -> Figura de Matplotlib.
 
-    Salida:
-        No retorna valores. Modifica la apariencia visual de la figura.
+    output:
+        - No retorna valores. Modifica la apariencia visual de la figura.
 
-    Restricciones:
-        Solo cambia estilo; no altera datos ni resultados matematicos.
+    Restrictions:
+        Solo cambia estilo; no altera datos ni resultados matemáticos.
     """
     figure.patch.set_facecolor(FIGURE_COLOR)
     for axis in figure.axes:
@@ -73,17 +84,17 @@ def _apply_dark_theme(figure: Figure) -> None:
 
 def _style_3d_axis(axis) -> None:
     """
-    Calcula:
+    Calculate:
     estilo visual para ejes tridimensionales.
 
-    Entradas:
-        axis -> Eje 3D de Matplotlib.
+    Input:
+        - axis -> Eje 3D de Matplotlib.
 
-    Salida:
-        No retorna valores. Ajusta paneles, grilla y angulo de vista.
+    Output:
+        - No retorna valores. Ajusta paneles, grilla y angulo de vista.
 
-    Restricciones:
-        Se usa solo en graficas 3D de matrices 3x3.
+    Restrictions:
+        Se usa solo en gráficas 3D de matrices 3x3.
     """
     axis.xaxis.pane.set_facecolor(AXIS_COLOR)
     axis.yaxis.pane.set_facecolor(AXIS_COLOR)
@@ -103,21 +114,21 @@ def _style_3d_axis(axis) -> None:
 
 def _node_coordinates(size: int) -> np.ndarray:
     """
-    Calcula:
+    Calculate:
     coordenadas base de nodos para representar la estructura.
 
-    Formula usada:
+    Fórmula usada:
     - Para 2 nodos: linea horizontal.
-    - Para 3 nodos: triangulo simplificado.
+    - Para 3 nodos: triángulo simplificado.
 
-    Entradas:
-        size -> Cantidad de nodos o dimension de la matriz.
+    Input:
+        - size -> Cantidad de nodos o dimension de la matriz.
 
-    Salida:
-        Arreglo de coordenadas (x, y).
+    Output:
+        - Arreglo de coordenadas (x, y).
 
-    Restricciones:
-        Esta funcion esta disenada para tamanos 2 y 3.
+    Restrictions:
+        Esta funcion esta disenada para tamaños 2 y 3.
     """
     if size == 2:
         return np.array([[0.0, 0.0], [1.8, 0.0]])
@@ -126,19 +137,19 @@ def _node_coordinates(size: int) -> np.ndarray:
 
 def build_heatmap_figure(result: AnalysisResult) -> Figure:
     """
-    Calcula:
+    Calculate:
     mapa de calor de la matriz A.
 
-    Formula usada:
-    color_ij = intensidad visual segun el valor de aij.
+    Fórmula usada:
+    color_ij = intensidad visual según el valor de aij.
 
-    Entradas:
-        result -> Resultado del analisis que contiene result.matrix.
+    Input:
+        - result -> Resultado del analisis que contiene result.matrix.
 
-    Salida:
-        Figura de Matplotlib con el mapa de calor.
+    Output:
+        - Figura de Matplotlib con el mapa de calor.
 
-    Restricciones:
+    Restrictions:
         La matriz debe ser 2x2 o 3x3 para coincidir con el alcance del proyecto.
     """
     matrix = result.matrix
@@ -177,20 +188,20 @@ def build_heatmap_figure(result: AnalysisResult) -> Figure:
 
 def build_structure_figure(result: AnalysisResult) -> Figure:
     """
-    Calcula:
-    comparacion entre estructura original y estructura deformada.
+    Calculate:
+    comparación entre estructura original y estructura deformada.
 
-    Formula usada:
+    Fórmula usada:
     coordenada_deformada = coordenada_original + vector_modo_1 * escala
 
-    Entradas:
-        result -> Resultado con matriz, vectores propios e intensidad nodal.
+    Input:
+        - result -> Resultado con matriz, vectores propios e intensidad nodal.
 
-    Salida:
-        Figura con barras, nodos, colores de intensidad y deformacion simulada.
+    Output:
+        - Figura con barras, nodos, colores de intensidad y deformación simulada.
 
-    Restricciones:
-        La deformacion es una simulacion academica basada en el primer modo
+    Restrictions:
+        La deformación es una simulación académica basada en el primer modo
         propio, no un desplazamiento real de obra.
     """
     matrix = result.matrix
@@ -271,20 +282,20 @@ def build_structure_figure(result: AnalysisResult) -> Figure:
 
 def build_vectors_figure(result: AnalysisResult) -> Figure:
     """
-    Calcula:
-    grafica de vectores propios.
+    Calculate:
+    gráfica de vectores propios.
 
-    Formula usada:
+    Fórmula usada:
     A * v = lambda * v
 
-    Entradas:
-        result -> Resultado con valores propios y vectores propios.
+    Input:
+        - result -> Resultado con valores propios y vectores propios.
 
-    Salida:
-        Figura 2D si la matriz es 2x2.
-        Figura 3D si la matriz es 3x3.
+    Output:
+        - Figura 2D si la matriz es 2x2.
+        - Figura 3D si la matriz es 3x3.
 
-    Restricciones:
+    Restrictions:
         Para matrices 3x3 se usan componentes X, Y y Z. Para matrices 2x2 se
         usan componentes X e Y.
     """
@@ -386,20 +397,20 @@ def build_vectors_figure(result: AnalysisResult) -> Figure:
 
 def build_modal_participation_figure(result: AnalysisResult) -> Figure:
     """
-    Calcula:
-    grafica de barras de participacion modal.
+    Calculate:
+    gráfica de barras de participación modal.
 
-    Formula usada:
-    porcentaje_i = participacion_i * 100
+    Fórmula usada:
+    porcentaje_i = participación_i * 100
 
-    Entradas:
-        result -> Resultado con result.modal_participation.
+    Input:
+        - result -> Resultado con result.modal_participation.
 
-    Salida:
-        Figura con porcentaje estimado de participacion de cada modo.
+    Output:
+        - Figura con porcentaje estimado de participación de cada modo.
 
-    Restricciones:
-        La participacion modal es una aproximacion educativa basada en magnitud
+    Restrictions:
+        La participación modal es una aproximación educativa basada en magnitud
         de vectores propios.
     """
     participation = result.modal_participation
@@ -417,17 +428,17 @@ def build_modal_participation_figure(result: AnalysisResult) -> Figure:
 
 def build_all_figures(result: AnalysisResult) -> dict[str, Figure]:
     """
-    Calcula:
-    conjunto completo de graficas del analisis.
+    Calculate:
+    conjunto completo de gráficas del análisis.
 
-    Entradas:
-        result -> Resultado completo del motor de analisis.
+    Input:
+        - result -> Resultado completo del motor de análisis.
 
-    Salida:
-        Diccionario con figuras: estructura, mapa de calor, vectores y modos.
+    Output:
+        - Diccionario con figuras: estructura, mapa de calor, vectores y modos.
 
-    Restricciones:
-        Se debe llamar despues de ejecutar analyze_matrix.
+    Restrictions:
+        Se debe llamar después de ejecutar analyze_matrix.
     """
     return {
         "estructura": build_structure_figure(result),
