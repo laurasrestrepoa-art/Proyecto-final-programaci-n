@@ -106,14 +106,3 @@ Interpretacion:
 El determinante es cero y uno de los valores propios tambien es cero. Esto
 indica posible singularidad, perdida de rigidez o falta de restricciones dentro
 del modelo simplificado.
-
-## Resumen para la sustentacion
-
-StructuraLab convierte una matriz en un analisis completo:
-
-- Calcula propiedades de algebra lineal.
-- Interpreta estabilidad y rigidez.
-- Representa nodos, esfuerzos y modos propios.
-- Exporta resultados en PDF.
-- Guarda historial de matrices analizadas.
-
