@@ -53,7 +53,7 @@ python main.py
 
 
 
-### Nota:
+### Nota Importante:
 Este proyecto fue creado con fines académicos, por tal razón la interpretación 
 estructural es una aproximación basada en propiedades matriciales y demás temas
 vistos en el álgebra lineal.
