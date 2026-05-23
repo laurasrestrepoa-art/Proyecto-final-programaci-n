@@ -1,6 +1,6 @@
 """
 =========================================================
-MODULO: gui/__init__.py
+SCRIPT: gui/__init__.py
 
 DESCRIPTION:
     Archivo que identifica la carpeta gui como paquete de interfaz gráfica.
