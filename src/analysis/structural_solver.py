@@ -3,24 +3,24 @@
 MODULO: structural_solver.py
 
 DESCRIPTION:
-    Este es el módulo central del analisis. Une los calculos de determinante, traza, inversa,
-    transpuesta, valores propios, intensidad nodal, estabilidad e interpretacion.
+    Este es el módulo central del análisis. Une los cálculos de determinante, traza, inversa,
+    transpuesta, valores propios, intensidad nodal, estabilidad e interpretación.
 
 PURPOSE:
-    Evitar que la interfaz grafica realice calculos directamente. Este modulo actua
-    como el motor matematico del proyecto StructuraLab.
+    Evitar que la interfaz gráfica realice cálculos directamente. Este módulo actúa
+    como el motor matemático del proyecto StructuraLab.
 
 INPUT:
     - matrix -> Matriz cuadrada 2x2 o 3x3 ingresada por el usuario.
 
 OUTPUT:
-    - Objeto AnalysisResult con todos los resultados numericos, graficos e
+    - Objeto AnalysisResult con todos los resultados numéricos, gráficos e
       interpretativos requeridos por la interfaz y los reportes.
 
 TOPICS RELATED TO THIS EXAMPLE:
-    - Programacion modular
-    - Integracion de funciones
-    - Analisis matricial
+    - Programación modular
+    - Integración de funciones
+    - Análisis matricial
     - Retorno de objetos estructurados
 
 AUTHORS:
@@ -57,7 +57,7 @@ from src.analysis.transpose import calculate_transpose
 class AnalysisResult:
     """
     Represents:
-    paquete completo de resultados generados por el analisis.
+    paquete completo de resultados generados por el análisis.
 
     Input:
         matrix, determinant, trace, inverse, transpose, eigenvalues,
@@ -66,7 +66,7 @@ class AnalysisResult:
 
     Output:
         Objeto organizado para que GUI, reportes y pruebas usen la misma
-        informacion sin repetir calculos.
+        información sin repetir cálculos.
     """
 
     matrix: np.ndarray
@@ -95,7 +95,7 @@ def calculate_nodal_intensity(matrix: np.ndarray) -> np.ndarray:
 
     Restrictions:
         Si todas las intensidades son cero, retorna el vector sin normalizar
-        para evitar division entre cero.
+        para evitar división entre cero.
     """
     intensity = np.sum(np.abs(matrix), axis=1)
     maximum = float(np.max(intensity)) if intensity.size else 0.0
@@ -115,10 +115,10 @@ def analyze_matrix(matrix: np.ndarray) -> AnalysisResult:
         matrix -> Matriz cuadrada 2x2 o 3x3.
 
     Output:
-        AnalysisResult con todos los resultados del analisis.
+        AnalysisResult con todos los resultados del análisis.
 
     Restrictions:
-        La matriz ya debe haber sido validada antes de llamar esta funcion.
+        La matriz ya debe haber sido validada antes de llamar esta función.
     """
     determinant = calculate_determinant(matrix)
     trace = calculate_trace(matrix)
