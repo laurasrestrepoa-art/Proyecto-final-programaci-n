@@ -1,6 +1,6 @@
 """
 ========================================
-SCRIPT: transpose.py
+MODULO: transpose.py
 
 DESCRIPTION:
     Este Módulo es el encargado de calcular la matriz transpuesta. La transpuesta cambia filas
