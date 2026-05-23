@@ -20,12 +20,12 @@ PURPOSE:
     de deformación.
 
 
-INPUTS:
+INPUT:
     - Matriz cuadrada de NumPy denominada matrix.
     - Matriz de vectores propios denominada eigenvectors.
 
 
-OUTPUTS:
+OUTPUT:
     - Valores propios ordenados.
     - Vectores propios ordenados.
     - Porcentajes de participación modal.
@@ -74,7 +74,7 @@ def calculate_eigen(matrix: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
     Input:
         matrix -> Matriz cuadrada A.
 
-    Outputs:
+    Output:
         eigenvalues -> Valores propios de λ ordenados por magnitud.
         eigenvectors -> Vectores propios v asociados a cada valor propio.
 
