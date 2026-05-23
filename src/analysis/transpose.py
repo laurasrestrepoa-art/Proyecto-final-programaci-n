@@ -3,11 +3,11 @@
 MODULO: transpose.py
 
 DESCRIPTION:
-    Este Módulo es el encargado de calcular la matriz transpuesta. La transpuesta cambia filas
-    por columnas y permite revisar simetria de la matriz.
+    Este Módulo es el encargado de cálcular la matriz transpuesta. La transpuesta cambia filas
+    por columnas y permite revisar simétria de la matriz.
 
 PURPOSE:
-    Apoyar el analisis de matrices de rigidez, donde la simetria suele ser una
+    Apoyar el análisis de matrices de rigidez, donde la simétria suele ser una
     propiedad esperada en modelos estructurales idealizados.
 
 INPUT:
@@ -18,9 +18,9 @@ OUTPUT:
 
 TOPICS RELATED TO THIS EXAMPLE:
     - Transpuesta de matrices
-    - Simetria matricial
+    - Simétria matricial
     - Funciones con retorno
-    - Algebra lineal
+    - Álgebra lineal
 
 AUTHORS:
     Isabella Mejía Urueña
@@ -55,6 +55,6 @@ def calculate_transpose(matrix: np.ndarray) -> np.ndarray:
 
     Restrictions:
         No requiere que la matriz sea invertible; solo necesita valores
-        numericos.
+        numéricos.
     """
     return matrix.T.copy()
