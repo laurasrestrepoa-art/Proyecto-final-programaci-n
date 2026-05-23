@@ -20,15 +20,6 @@ py -m pip install -r requirements.txt
 py main.py
 ```
 
-Y para las pruebas:
-
-```md
-## Cómo ejecutar las pruebas
-
-Desde la carpeta principal del proyecto, ejecuta:
-
-```cmd
-py -B -m unittest discover tests
 
 ## Ejemplo 1: matriz estable 2x2
 
