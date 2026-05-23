@@ -1,10 +1,12 @@
 # Proyecto final: StructureLab
 
-Este proyecto fue realizado con el fin de aplicar conceptos de álgebra lineal y programación
-en Python al análisis estructural mediante matrices. El programa permite ingresar matrices 
-2x2 y 3x3 para realizar diferentes operaciones matemáticas y visualizar los resultados 
-mediante gráficas, además de mostrar una interpretación de los resultados obtenidos.
+StructureLab es un proyecto académico desarrollado con el propósito de aplicar conceptos de álgebra lineal
+y programación en Python al análisis estructural mediante matrices.
 
+El programa permite ingresar matrices de tamaño 2x2 y 3x3, realizar operaciones matemáticas como determinante,
+traza, inversa, transpuesta, valores propios y vectores propios, y visualizar los resultados mediante gráficas. 
+Además, genera una interpretación estructural de los resultados obtenidos, relacionando el comportamiento matemático 
+de la matriz con conceptos como estabilidad, rigidez, deformación y modos de respuesta.
 
 ## Funciones principales: 
 
