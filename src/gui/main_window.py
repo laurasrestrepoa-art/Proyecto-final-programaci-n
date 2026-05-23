@@ -1,6 +1,6 @@
 """
 =========================================================
-MODULO: main_window.py
+MODULE: main_window.py
 
 DESCRIPTION:
     Módulo que contiene la ventana principal de StructuraLab. Conecta el panel de
@@ -68,7 +68,7 @@ from src.utils.validations import validate_matrix
 class MainWindow(QMainWindow):
     """
     Represents:
-    ventana principal de la aplicación.
+    Ventana principal de la aplicación.
 
     Input:
         - No recibe parámetros directos al crearse.
@@ -80,7 +80,7 @@ class MainWindow(QMainWindow):
     def __init__(self) -> None:
         """
         Calculate:
-        inicialización completa de la ventana principal.
+        Inicialización completa de la ventana principal.
 
         Input:
             - No recibe parámetros.
@@ -103,7 +103,7 @@ class MainWindow(QMainWindow):
     def _build_ui(self) -> None:
         """
         Calculate:
-        construcción de la interfaz principal.
+        Construcción de la interfaz principal.
 
         Input:
             - No recibe parámetros.
@@ -150,7 +150,7 @@ class MainWindow(QMainWindow):
     def _connect_signals(self) -> None:
         """
         Calculate:
-        conexión entre acciones del usuario y funciones de la ventana.
+        Conexión entre acciones del usuario y funciones de la ventana.
 
         Input:
             - No recibe parámetros.
@@ -167,10 +167,10 @@ class MainWindow(QMainWindow):
     def run_analysis(self, matrix: np.ndarray) -> None:
         """
         Calculate:
-        flujo completo de análisis de una matriz.
+        Flujo completo de análisis de una matriz.
 
         Fórmula usada:
-        matriz valida -> analyze_matrix(A) -> gráficas + resultados + historial
+        Matriz valida -> analyze_matrix(A) -> gráficas + resultados + historial
 
         Input:
             - matrix -> Matriz 2x2 o 3x3 ingresada por el usuario.
@@ -208,7 +208,7 @@ class MainWindow(QMainWindow):
     def export_report(self) -> None:
         """
         Calculate:
-        exportación del análisis actual como reporte PDF.
+        Exportación del análisis actual como reporte PDF.
 
         Input:
             - No recibe parámetros. Usa self.current_result y las figuras actuales.
