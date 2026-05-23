@@ -1,24 +1,24 @@
 """
-SCRIPT: analysis/__init__.py
+=========================================================
+SCRIPT: config/__init__.py
 
 DESCRIPTION:
-    Archivo que identifica la carpeta analysis como paquete de cálculos matemáticos
-    y estructurales.
+    Archivo que identifica la carpeta config como paquete de configuración del
+    proyecto.
 
 PURPOSE:
-    Agrupar los módulos de determinante, traza, inversa, valores propios,
-    estabilidad e interpretación.
+    Agrupar constantes y rutas generales usadas por la aplicación.
 
 INPUT:
     - No recibe entradas.
 
 OUTPUT:
-    - Paquete de análisis disponible para importación.
+    - Paquete de configuración disponible para importación.
 
 TOPICS RELATED TO THIS SCRIPT:
-    - Modularidad
-    - Álgebra lineal
-    - Análisis estructural
+    - Configuración
+    - Rutas de proyecto
+    - Paquetes Python
 
 AUTHORS:
     Isabella Mejía Urueña
@@ -33,30 +33,4 @@ CREATION DATE:
 LAST UPDATE: 
     2026-05-23
 =========================================================
-"""
-"""
-=========================================================
-MODULO: config/__init__.py
-
-DESCRIPCION:
-Archivo que identifica la carpeta config como paquete de configuracion del
-proyecto.
-
-PROPOSITO:
-Agrupar constantes y rutas generales usadas por la aplicacion.
-
-ENTRADAS:
-No recibe entradas.
-
-SALIDAS:
-Paquete de configuracion disponible para importacion.
-
-TEMAS RELACIONADOS CON ESTE EJEMPLO:
-- Configuracion
-- Rutas de proyecto
-- Paquetes Python
-
-AUTORES:
-Isabella Mejía Urueña
-Laura Sofía Restrepo Ardila
 """
