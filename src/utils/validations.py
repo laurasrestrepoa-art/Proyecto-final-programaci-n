@@ -1,6 +1,6 @@
 """
 ========================================
-MODULO: validations.py
+MODULE: validations.py
 
 DESCRIPTION:
     Módulo encargado de válidar que la matriz ingresada por el usuario cumpla las
@@ -15,7 +15,7 @@ INPUT:
 OUTPUT:
     - Tupla con un valor booleano y un mensaje de error si aplica.
 
-TOPICS RELATED TO THIS MODULO:
+TOPICS RELATED TO THIS MODULE:
     - Validación de datos
     - Restricciones de dominio
     - Matrices cuadradas
@@ -44,7 +44,7 @@ import numpy as np
 def validate_matrix(matrix: np.ndarray) -> tuple[bool, str]:
     """
     Calculate:
-    verificación de condiciones para analizar una matriz.
+    Verificación de condiciones para analizar una matriz.
 
     Reglas usadas:
     - La matriz debe ser cuadrada.
