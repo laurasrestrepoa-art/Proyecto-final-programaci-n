@@ -1,29 +1,40 @@
 """
+========================================
 SCRIPT: trace.py
 
 DESCRIPTION:
-Modulo encargado de calcular la traza de una matriz cuadrada, es decir, la suma
-de los elementos ubicados en la diagonal principal.
+    Este Módulo es el encargado de calcular la traza de una matriz cuadrada, es decir, la suma
+    de los elementos ubicados en la diagonal principal.
 
 PURPOSE:
-Complementar el analisis matricial mostrando una medida global de rigidez
-asociada a los terminos diagonales de la matriz.
+    Complementar el analisis matricial mostrando una medida global de rigidez
+    asociada a los terminos diagonales de la matriz.
 
 INPUT:
-matrix -> Matriz cuadrada de NumPy.
+    - matrix -> Matriz cuadrada de NumPy.
 
 OUTPUT:
-Traza de la matriz como numero decimal.
+    - Traza de la matriz como numero decimal.
 
-TEMAS RELACIONADOS CON ESTE EJEMPLO:
-- Funciones matematicas
-- Diagonal principal
-- Retorno de valores
-- Algebra lineal
+TOPICS RELATED TO THIS EXAMPLE:
+    - Funciones matematicas
+    - Diagonal principal
+    - Retorno de valores
+    - Algebra lineal
 
-AUTORES:
-Isabella Mejía Urueña
-Laura Sofía Restrepo Ardila
+AUTHORS:
+    Isabella Mejía Urueña
+    Laura Sofía Restrepo Ardila
+    
+VERSION:
+    3.O
+
+CREATION DATE:
+    2026-05-15
+
+LAST UPDATE:
+    2026-05-23
+========================================
 """
 
 from __future__ import annotations
@@ -33,16 +44,16 @@ import numpy as np
 
 def calculate_trace(matrix: np.ndarray) -> float:
     """
-    Calcula:
+    Calculate:
     traza(A) = a11 + a22 + ... + ann
 
-    Entradas:
+    Input:
         matrix -> Matriz cuadrada A.
 
-    Salida:
+    Output:
         Suma de los elementos de la diagonal principal.
 
-    Restricciones:
+    Restrictions:
         La matriz debe ser cuadrada para que la diagonal principal represente el
         sistema correctamente.
     """
