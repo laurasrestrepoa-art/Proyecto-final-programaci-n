@@ -1,19 +1,19 @@
 """
-MODULO: analysis/__init__.py
+SCRIPT: analysis/__init__.py
 
-DESCRIPCION:
-Archivo que identifica la carpeta analysis como paquete de calculos matematicos
-y estructurales.
+DESCRIPTION:
+    Archivo que identifica la carpeta analysis como paquete de cálculos matemáticos
+    y estructurales.
 
-PROPOSITO:
-Agrupar los modulos de determinante, traza, inversa, valores propios,
-estabilidad e interpretacion.
+PURPOSE:
+    Agrupar los módulos de determinante, traza, inversa, valores propios,
+    estabilidad e interpretación.
 
-ENTRADAS:
-No recibe entradas.
+INPUT:
+    No recibe entradas.
 
-SALIDAS:
-Paquete de analisis disponible para importacion.
+OUTPUT:
+    Paquete de análisis disponible para importación.
 
 TEMAS RELACIONADOS CON ESTE EJEMPLO:
 - Modularidad
