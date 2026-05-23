@@ -1,29 +1,40 @@
 """
-MODULO: styles.py
+=========================================================
+SCRIPT: styles.py
 
-DESCRIPCION:
-Modulo que contiene la hoja de estilos visuales de la interfaz grafica en PyQt6.
-Define colores, bordes, botones, tablas, pestanas y cuadros de texto.
+DESCRIPTION:
+    Este Script contiene la hoja de estilos visuales de la interfaz gráfica en PyQt6.
+    Define colores, bordes, botones, tablas, pestañas y cuadros de texto.
 
-PROPOSITO:
-Mantener el diseno visual separado de la logica del programa. Esto permite
-cambiar la apariencia sin modificar calculos ni funciones principales.
+PURPOSE:
+    Mantener el diseno visual separado de la lógica del programa. Esto permite
+    cambiar la apariencia sin modificar cálculos ni funciones principales.
 
-ENTRADAS:
-No recibe parametros. Contiene una cadena de texto con reglas QSS.
+INPUT:
+    - No recibe parámetros. Contiene una cadena de texto con reglas QSS.
 
-SALIDAS:
-APP_STYLESHEET -> Estilos aplicados a la ventana principal.
+OUTPUT:
+    - APP_STYLESHEET -> Estilos aplicados a la ventaña principal.
 
-TEMAS RELACIONADOS CON ESTE EJEMPLO:
-- Interfaz grafica
-- Estilos QSS
-- Modo oscuro
-- Separacion de responsabilidades
+TOPICS RELATED TO THIS MODULE:
+    - Interfaz gráfica
+    - Estilos QSS
+    - Modo oscuro
+    - Separación de responsabilidades
 
-AUTORES:
-Isabella Mejía Urueña
-Laura Sofía Restrepo Ardila
+AUTHORS:
+    Isabella Mejía Urueña
+    Laura Sofía Restrepo Ardila
+
+VERSION:
+    3.0
+
+CREATION DATE:
+    2026-05-15
+
+LAST UPDATE: 
+    2026-05-23
+=========================================================
 """
 
 APP_STYLESHEET = """
