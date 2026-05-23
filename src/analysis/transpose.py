@@ -1,6 +1,6 @@
 """
 ========================================
-MODULO: transpose.py
+MODULE: transpose.py
 
 DESCRIPTION:
     Este Módulo es el encargado de calcular la matriz transpuesta. La transpuesta cambia filas
@@ -16,7 +16,7 @@ INPUT:
 OUTPUT:
     - Matriz transpuesta A^T.
 
-TOPICS RELATED TO THIS MODULO:
+TOPICS RELATED TO THIS MODULE:
     - Transpuesta de matrices
     - Simétria matricial
     - Funciones con retorno
