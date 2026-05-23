@@ -16,7 +16,7 @@ INPUT:
 OUTPUT:
     - Matriz transpuesta A^T.
 
-TOPICS RELATED TO THIS EXAMPLE:
+TOPICS RELATED TO THIS MODULO:
     - Transpuesta de matrices
     - Simétria matricial
     - Funciones con retorno
