@@ -9,22 +9,26 @@ DESCRIPTION:
 
 
 PURPOSE:
-    Relacionar el algebra lineal con el comportamiento físico de 
+    Relacionar el álgebra lineal con el comportamiento físico de 
     una estructura. 
     
-    A través de conceptos como valores propios, se innterpeta la
-    estabilidad de una estructura, ya que dichas valores representan
-    frecuencias asociadas al sistema. Asimismo, los vectores propios
-    se representan modos básicos de deformación.
+    A través de conceptos como valores propios, se interpreta
+    la estabilidad de una estructura, ya que dichos valores se
+    relacionan con frecuencias asociadas al sistema.
+    
+    Asimismo, los vectores propios representan modos básicos
+    de deformación.
+
 
 INPUT:
-    - Matriz cuadrada de NumPy: Recibe el nombre de matrix.
-    - Matriz cuyas columnas representan vectores propios: La variable se denomina eigenvectors
+    - Matriz cuadrada de NumPy denominada matrix.
+    - Matriz de vectores propios denominada eigenvectors.
+
 
 OUTPUT:
-    - Valores propios ordenados
-    - Vectores propios ordenados 
-    - Porcentajes de participacion modal.
+    - Valores propios ordenados.
+    - Vectores propios ordenados.
+    - Porcentajes de participación modal.
 
 TOPICS RELATED TO THIS MODULE:
     - Álgebra lineal
@@ -75,7 +79,7 @@ def calculate_eigen(matrix: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
         eigenvectors -> Vectores propios v asociados a cada valor propio.
 
     Restricciones:
-        - La matriz debe ser cuadrada de tamaña 2x2 o 3x3.
+        - La matriz debe ser cuadrada de tamaño 2x2 o 3x3.
     """
     
     eigenvalues, eigenvectors = np.linalg.eig(matrix)
@@ -95,6 +99,7 @@ def modal_participation(eigenvectors: np.ndarray) -> np.ndarray:
     relativa aproximada de cada modo de vibración.
     
     Es decir:
+    
     participacion_i = suma(|v_i|) / suma_total_de_componentes
 
     Donde: 
@@ -105,13 +110,13 @@ def modal_participation(eigenvectors: np.ndarray) -> np.ndarray:
         eigenvectors -> Matriz de vectores propios por columnas.
 
     Output:
-        - Vector con la participacion relativa de cada modo.
+        - Vector con la participación relativa de cada modo.
 
      Restrictions:
         - Si la suma total es cero, retorna un vector de ceros para evitar
-          division entre cero.
+          división entre cero.
     """
-    # Suma de los valores absolutos de cada vectpr propio por columnas.
+    # Suma de los valores absolutos de cada vector propio por columnas.
     weights = np.sum(np.abs(eigenvectors), axis=0)
 
     # Para calcular la suma total de participaciones.
