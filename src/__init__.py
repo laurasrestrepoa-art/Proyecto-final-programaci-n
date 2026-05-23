@@ -1,26 +1,37 @@
 """
-MODULO: src/__init__.py
+=========================================================
+SCRIPT: src/__init__.py
 
-DESCRIPCION:
-Archivo que identifica la carpeta src como paquete principal de Python para el
-proyecto StructuraLab.
+DESCRIPTION:
+    Archivo que identifica la carpeta src como paquete principal de Python para el
+    proyecto StructuraLab.
 
-PROPOSITO:
-Permitir importaciones organizadas como src.analysis, src.gui, src.storage y
-src.visualization.
+PURPOSE:
+    Permitir importaciones organizadas como src.analysis, src.gui, src.storage y
+    src.visualization.
 
-ENTRADAS:
-No recibe entradas.
+INPUT:
+    - No recibe entradas.
 
-SALIDAS:
-Paquete Python disponible para importacion.
+OUTPUT:
+    - Paquete Python disponible para importación.
 
-TEMAS RELACIONADOS CON ESTE EJEMPLO:
-- Paquetes en Python
-- Organizacion de codigo
-- Importacion de modulos
+TOPICS RELATED TO THIS SRIPT:
+    - Paquetes en Python
+    - Organización de codigo
+    - Importación de módulos
 
-AUTORES:
-Isabella Mejía Urueña
-Laura Sofía Restrepo Ardila
+AUTHORS:
+    Isabella Mejía Urueña
+    Laura Sofía Restrepo Ardila
+
+VERSION:
+    3.0
+
+CREATION DATE:
+    2026-05-15
+
+LAST UPDATE: 
+    2026-05-23
+=========================================================
 """
