@@ -1,6 +1,6 @@
 """
 ========================================
-MODULO: structural_solver.py
+MODULE: structural_solver.py
 
 DESCRIPTION:
     Este es el módulo central del análisis. Une los cálculos de determinante, traza, inversa,
@@ -17,7 +17,7 @@ OUTPUT:
     - Objeto AnalysisResult con todos los resultados numéricos, gráficos e
       interpretativos requeridos por la interfaz y los reportes.
 
-TOPICS RELATED TO THIS MODULO:
+TOPICS RELATED TO THIS MODULE:
     - Programación modular
     - Integración de funciones
     - Análisis matricial
