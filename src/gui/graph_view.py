@@ -1,6 +1,6 @@
 """
 =========================================================
-MODULO: graph_view.py
+MODULE: graph_view.py
 
 DESCRIPTION:
     Este módulo crea el panel gráfico de la interfaz. Muestra las gráficas del
@@ -51,7 +51,7 @@ from src.visualization.plot_builders import build_all_figures
 class GraphView(QTabWidget):
     """
     Represents:
-    área de gráficas organizada en pestañas.
+    Área de gráficas organizada en pestañas.
 
     Input:
         - parent -> Componente visual padre opcional de PyQt6.
@@ -63,7 +63,7 @@ class GraphView(QTabWidget):
     def __init__(self, parent: QWidget | None = None) -> None:
         """
         Calculate:
-        inicialización del panel de gráficas con una pestaña de bienvenida.
+        Inicialización del panel de gráficas con una pestaña de bienvenida.
 
         Input:
             - parent -> Componente visual padre opcional.
@@ -83,7 +83,7 @@ class GraphView(QTabWidget):
     def _wrap_widget(self, widget: QWidget) -> QWidget:
         """
         Calculate:
-        contenedor gráfico para insertar un widget dentro de una pestaña.
+        Contenedor gráfico para insertar un widget dentro de una pestaña.
 
         Input:
             widget -> Elemento visual que se desea mostrar.
@@ -103,7 +103,7 @@ class GraphView(QTabWidget):
     def display_result(self, result: AnalysisResult) -> None:
         """
         Calculate:
-        actualización de todas las gráficas a partir de un nuevo análisis.
+        Actualización de todas las gráficas a partir de un nuevo análisis.
 
         Input:
             - result -> Resultado completo de analyze_matrix.
