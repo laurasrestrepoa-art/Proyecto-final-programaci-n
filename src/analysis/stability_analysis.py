@@ -1,6 +1,6 @@
 """
 ========================================
-MODULO: stability_analysis.py
+MODULE: stability_analysis.py
 
 DESCRIPTION:
    El módulo clasifica la estabilidad estructural de la matriz mediante reglas
@@ -21,7 +21,7 @@ INPUT:
 OUTPUT:
     - Objeto StabilityResult con estado, riesgo e indicadores estructurales.
 
-TOPICS RELATED TO THIS MODULO:
+TOPICS RELATED TO THIS MODULE:
     - ClasificaciÓn de estabilidad
     - Dominancia diagonal
     - Valores propios
@@ -53,7 +53,7 @@ import numpy as np
 class StabilityResult:
     """
     Represents:
-    resumen de indicadores usados para interpretar la estabilidad.
+    Resumen de indicadores usados para interpretar la estabilidad.
 
     Input:
         - status -> Texto con el estado general.
@@ -107,7 +107,7 @@ def classify_stability(
 ) -> StabilityResult:
     """
     Calculate:
-    clasificación estructural segun reglas:
+    Clasificación estructural segun reglas:
     - det(A) cercano a 0 -> sistema crítico o singular.
     - valores propios negativos -> posible modo inestable.
     - valores propios positivos + simetria + dominancia -> estable y rigido.
@@ -118,10 +118,10 @@ def classify_stability(
         - eigenvalues -> Valores propios de A.
         - tolerance -> Valor mínimo para considerar cero numérico.
 
-    Salida:
+    Output:
         - StabilityResult con estado, nivel de riesgo e indicadores.
 
-    Restricciones:
+    Restrictions:
         El análisis es académico y simplificado; no reemplaza un cálculo
         estructural profesional.
     """
