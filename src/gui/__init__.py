@@ -1,24 +1,35 @@
 """
+=========================================================
 MODULO: gui/__init__.py
 
-DESCRIPCION:
-Archivo que identifica la carpeta gui como paquete de interfaz grafica.
+DESCRIPTION:
+    Archivo que identifica la carpeta gui como paquete de interfaz gráfica.
 
-PROPOSITO:
-Agrupar ventanas, paneles, estilos y componentes visuales de StructuraLab.
+PURPOSE:
+    Agrupar ventanas, paneles, estilos y componentes visuales de StructuraLab.
 
-ENTRADAS:
-No recibe entradas.
+INPUT:
+    - No recibe entradas.
 
-SALIDAS:
-Paquete de interfaz grafica disponible para importacion.
+OUTPUT:
+    Paquete de interfaz grafica disponible para importacion.
 
-TEMAS RELACIONADOS CON ESTE EJEMPLO:
-- PyQt6
-- Interfaz grafica
-- Componentes visuales
+TOPICS RELATED TO THIS SCRIPT:
+    - PyQt6
+    - Interfaz gráfica
+    - Componentes visuales
 
-AUTORES:
-Isabella Mejía Urueña
-Laura Sofía Restrepo Ardila
+AUTHORS:
+    Isabella Mejía Urueña
+    Laura Sofía Restrepo Ardila
+
+VERSION:
+    3.0
+
+CREATION DATE:
+    2026-05-15
+
+LAST UPDATE: 
+    2026-05-23
+=========================================================
 """
