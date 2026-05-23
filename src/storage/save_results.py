@@ -77,7 +77,7 @@ def append_history(result: AnalysisResult) -> Path:
         # Creación de carpetas.
     ensure_output_dirs()
 
-    # Ruta del archivo hiatorial.
+    # Ruta del archivo historial.
     path = MATRICES_DIR / "history.json"
     if path.exists():
         entries = json.loads(path.read_text(encoding="utf-8"))
