@@ -20,7 +20,17 @@ TOPICS RELATED TO THIS SCRIPT:
     - Álgebra lineal
     - Análisis estructural
 
-AUTORES:
-Isabella Mejía Urueña
-Laura Sofía Restrepo Ardila
+AUTHORS:
+    Isabella Mejía Urueña
+    Laura Sofía Restrepo Ardila
+
+VERSION:
+    3.0
+
+CREATION DATE:
+    2026-05-15
+
+LAST UPDATE: 
+    2026-05-23
+=========================================================
 """
