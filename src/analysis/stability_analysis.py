@@ -21,7 +21,7 @@ INPUT:
 OUTPUT:
     - Objeto StabilityResult con estado, riesgo e indicadores estructurales.
 
-TOPICS RELATED TO THIS EXAMPLE:
+TOPICS RELATED TO THIS MODULO:
     - ClasificaciÓn de estabilidad
     - Dominancia diagonal
     - Valores propios
