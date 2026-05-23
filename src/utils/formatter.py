@@ -1,29 +1,40 @@
 """
+========================================
 MODULO: formatter.py
 
-DESCRIPCION:
-Modulo con funciones auxiliares para convertir numeros, matrices y vectores en
-texto legible dentro de la interfaz y los reportes.
+DESCRIPTION:
+    Módulo con funciones auxiliares para convertir números, matrices y vectores en
+    texto legible dentro de la interfaz y los reportes.
 
-PROPOSITO:
-Mostrar resultados matematicos de forma clara, evitando que NumPy imprima datos
-con formatos dificiles de leer para la sustentacion.
+PURPOSE:
+    Mostrar resultados matemáticos de forma clara, evitando que NumPy imprima datos
+    con formatos dificiles de leer para la sustentacion.
 
-ENTRADAS:
-Valores numericos, matrices o vectores de NumPy.
+INPUT:
+    - Valores numéricos, matrices o vectores de NumPy.
 
-SALIDAS:
-Cadenas de texto listas para mostrarse en pantalla o PDF.
+OUTPUT:
+    - Cadenas de texto listas para mostrarse en pantalla o PDF.
 
-TEMAS RELACIONADOS CON ESTE EJEMPLO:
-- Formato de salida
-- Numeros reales y complejos
-- Matrices
-- Vectores
+TOPICS RELATED TO THIS MODULO:
+    - Formato de salida
+    - Números reales y complejos
+    - Matrices
+    - Vectores
 
-AUTORES:
-Isabella Mejía Urueña
-Laura Sofía Restrepo Ardila
+AUTHORS:
+    Isabella Mejía Urueña
+    Laura Sofía Restrepo Ardila
+
+VERSION:
+    3.O
+
+CREATION DATE:
+    2026-05-15
+
+LAST UPDATE:
+    2026-05-23
+========================================
 """
 
 from __future__ import annotations
@@ -35,21 +46,21 @@ import numpy as np
 
 def format_number(value: complex | float | int, decimals: int = 4) -> str:
     """
-    Calcula:
-    representacion textual de un numero real o complejo.
+    Calculate:
+    representación textual de un número real o complejo.
 
-    Formula usada:
-    valor_formateado = numero redondeado a una cantidad fija de decimales.
+    Fórmula usada:
+    valor_formateado = número redondeado a una cantidad fija de decimales.
 
-    Entradas:
-        value -> Numero real, entero o complejo.
-        decimals -> Cantidad de decimales a mostrar.
+    Input:
+        - value -> Número real, entero o complejo.
+        - decimals -> Cantidad de decimales a mostrar.
 
-    Salida:
-        Texto con el numero formateado.
+    Output:
+        - Texto con el número formateado.
 
-    Restricciones:
-        Si el numero complejo tiene partes cercanas a cero, se muestran como
+    Restrictions:
+        Si el número complejo tiene partes cercanas a cero, se muestran como
         cero para mejorar la lectura.
     """
     value = np.real_if_close(value, tol=1000)
@@ -65,17 +76,17 @@ def format_number(value: complex | float | int, decimals: int = 4) -> str:
 
 def format_matrix(matrix: np.ndarray | None, decimals: int = 3) -> str:
     """
-    Calcula:
-    representacion de una matriz como texto por filas.
+    Calculate:
+    representación de una matriz como texto por filas.
 
-    Entradas:
-        matrix -> Matriz de NumPy o None.
-        decimals -> Cantidad de decimales por elemento.
+    Input:
+        - matrix -> Matriz de NumPy o None.
+        - decimals -> Cantidad de decimales por elemento.
 
-    Salida:
-        Texto con la matriz organizada por filas.
+    Output:
+        - Texto con la matriz organizada por filas.
 
-    Restricciones:
+    Restrictions:
         Si matrix es None, retorna "No disponible".
     """
     if matrix is None:
@@ -88,17 +99,17 @@ def format_matrix(matrix: np.ndarray | None, decimals: int = 3) -> str:
 
 def format_vector(vector: np.ndarray, decimals: int = 4) -> str:
     """
-    Calcula:
-    representacion de un vector en una sola linea.
+    Calculate:
+    representación de un vector en una sola linea.
 
-    Entradas:
-        vector -> Vector de NumPy.
-        decimals -> Cantidad de decimales por componente.
+    Input:
+        - vector -> Vector de NumPy.
+        - decimals -> Cantidad de decimales por componente.
 
-    Salida:
-        Texto con formato [v1, v2, v3].
+    Output:
+        - Texto con formato [v1, v2, v3].
 
-    Restricciones:
-        El vector debe contener valores numericos.
+    Restrictions:
+        El vector debe contener valores numéricos.
     """
     return "[" + ", ".join(format_number(value, decimals) for value in vector) + "]"
