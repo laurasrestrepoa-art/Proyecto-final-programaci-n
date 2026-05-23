@@ -11,6 +11,7 @@ Luego ejecuta:
 
 ```cmd
 py main.py
+```
 
 Si es la primera vez en el computador:
 
