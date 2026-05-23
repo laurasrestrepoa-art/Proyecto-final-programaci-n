@@ -1,30 +1,80 @@
 """
+=========================================================
+MODULO: graph_view.py
+
+DESCRIPTION:
+    Este módulo crea el panel gráfico de la interfaz. Muestra las gráficas del
+    análisis en pestañas: estructura, mapa de calor, vectores y modos.
+
+PURPOSE:
+    Integrar las figuras de Matplotlib dentro de la ventana PyQt6 sin mezclar el
+    codigo visual con los calculos matematicos.
+
+INPUT:
+    - result -> Objeto AnalysisResult generado por el análisis.
+    - widget -> Elemento gráfico que se desea ubicar dentro de una pestaña.
+
+OUTPUT:
+    - Panel QTabWidget con gráficas actualizadas.
+
+TOPICS RELATED TO THIS MODULE:
+    - Interfaz gráfica
+    - Pestañas
+    - Integración Matplotlib y PyQt6
+    - Visualización de resultados
+
+AUTHORS:
+    Isabella Mejía Urueña
+    Laura Sofía Restrepo Ardila
+
+VERSION:
+    3.0
+
+CREATION DATE:
+    2026-05-15
+
+LAST UPDATE: 
+    2026-05-23
+=========================================================
+"""
+"""
+=========================================================
 MODULO: main_window.py
 
-DESCRIPCION:
-Modulo que contiene la ventana principal de StructuraLab. Conecta el panel de
-entrada, el motor de analisis, las graficas, el panel de resultados y la
-exportacion de reportes.
+DESCRIPTION:
+    Módulo que contiene la ventana principal de StructuraLab. Conecta el panel de
+    entrada, el motor de analisis, las graficas, el panel de resultados y la
+    exportación de reportes.
 
-PROPOSITO:
-Coordinar el flujo completo de la aplicacion sin realizar calculos matematicos
-directamente dentro de la interfaz.
+PURPOSE:
+    Coordinar el flujo completo de la aplicación sin realizar cálculos matemáticos
+    directamente dentro de la interfaz.
 
-ENTRADAS:
-matrix -> Matriz enviada desde MatrixInputWidget.
+INPUT:
+    - matrix -> Matriz enviada desde MatrixInputWidget.
 
-SALIDAS:
-Actualizacion visual de resultados, graficas, historial y reportes PDF.
+OUTPUT:
+    - Actualización visual de resultados, gráficas, historial y reportes PDF.
 
-TEMAS RELACIONADOS CON ESTE EJEMPLO:
-- Interfaz grafica
-- Programacion modular
-- Senales y eventos
-- Integracion de analisis y visualizacion
+TOPICS RELATED TO THIS MODULE:
+    - Interfaz gráfica
+    - Programación modular
+    - Señales y eventos
+    - Integración de análisis y visualización
 
-AUTORES:
-Isabella Mejía Urueña
-Laura Sofía Restrepo Ardila
+AUTHORS:
+    Isabella Mejía Urueña
+    Laura Sofía Restrepo Ardila
+
+VERSION:
+    3.0
+
+CREATION DATE:
+    2026-05-15
+
+LAST UPDATE: 
+    2026-05-23
+=========================================================
 """
 
 from __future__ import annotations
@@ -56,29 +106,29 @@ from src.utils.validations import validate_matrix
 
 class MainWindow(QMainWindow):
     """
-    Representa:
-    ventana principal de la aplicacion.
+    Represents:
+    ventana principal de la aplicación.
 
-    Entradas:
-        No recibe parametros directos al crearse.
+    Input:
+        - No recibe parámetros directos al crearse.
 
-    Salida:
-        Ventana grafica con panel de entrada, graficas y resultados.
+    Output:
+        Ventana gráfica con panel de entrada, gráficas y resultados.
     """
 
     def __init__(self) -> None:
         """
-        Calcula:
-        inicializacion completa de la ventana principal.
+        Calculate:
+        inicialización completa de la ventana principal.
 
-        Entradas:
-            No recibe parametros.
+        Input:
+            - No recibe parámetros.
 
-        Salida:
-            No retorna valores. Configura ventana, estilos y componentes.
+        Output:
+            - No retorna valores. Configura ventana, estilos y componentes.
 
-        Restricciones:
-            Debe ejecutarse despues de crear QApplication.
+        Restrictions:
+            Debe ejecutarse después de crear QApplication.
         """
         super().__init__()
         ensure_output_dirs()
@@ -91,16 +141,16 @@ class MainWindow(QMainWindow):
 
     def _build_ui(self) -> None:
         """
-        Calcula:
-        construccion de la interfaz principal.
+        Calculate:
+        construcción de la interfaz principal.
 
-        Entradas:
-            No recibe parametros.
+        Input:
+            - No recibe parámetros.
 
-        Salida:
-            No retorna valores. Organiza titulo, paneles y separadores.
+        Output:
+            - No retorna valores. Organiza titulo, paneles y separadores.
 
-        Restricciones:
+        Restrictions:
             Solo crea elementos visuales; no analiza matrices.
         """
         root = QWidget()
@@ -138,38 +188,38 @@ class MainWindow(QMainWindow):
 
     def _connect_signals(self) -> None:
         """
-        Calcula:
-        conexion entre acciones del usuario y funciones de la ventana.
+        Calculate:
+        conexión entre acciones del usuario y funciones de la ventana.
 
-        Entradas:
-            No recibe parametros.
+        Input:
+            - No recibe parámetros.
 
-        Salida:
-            No retorna valores. Conecta analizar y exportar.
+        Output:
+            - No retorna valores. Conecta analizar y exportar.
 
-        Restricciones:
-            Las senales requieren que los widgets ya hayan sido creados.
+        Restrictions:
+            Las señales requieren que los widgets ya hayan sido creados.
         """
         self.input_panel.analyze_requested.connect(self.run_analysis)
         self.input_panel.export_requested.connect(self.export_report)
 
     def run_analysis(self, matrix: np.ndarray) -> None:
         """
-        Calcula:
-        flujo completo de analisis de una matriz.
+        Calculate:
+        flujo completo de análisis de una matriz.
 
-        Formula usada:
-        matriz valida -> analyze_matrix(A) -> graficas + resultados + historial
+        Fórmula usada:
+        matriz valida -> analyze_matrix(A) -> gráficas + resultados + historial
 
-        Entradas:
-            matrix -> Matriz 2x2 o 3x3 ingresada por el usuario.
+        Input:
+            - matrix -> Matriz 2x2 o 3x3 ingresada por el usuario.
 
-        Salida:
-            No retorna valores. Actualiza interfaz, graficas e historial.
+        Output:
+            - No retorna valores. Actualiza interfaz, graficas e historial.
 
-        Restricciones:
+        Restrictions:
             Si la matriz no cumple las validaciones, se muestra una advertencia
-            y no se ejecuta el analisis.
+            y no se ejecuta el análisis.
         """
         valid, message = validate_matrix(matrix)
         if not valid:
@@ -196,17 +246,17 @@ class MainWindow(QMainWindow):
 
     def export_report(self) -> None:
         """
-        Calcula:
-        exportacion del analisis actual como reporte PDF.
+        Calculate:
+        exportación del análisis actual como reporte PDF.
 
-        Entradas:
-            No recibe parametros. Usa self.current_result y las figuras actuales.
+        Input:
+            - No recibe parámetros. Usa self.current_result y las figuras actuales.
 
-        Salida:
-            No retorna valores. Genera un archivo en outputs/reports.
+        Output:
+            - No retorna valores. Genera un archivo en outputs/reports.
 
-        Restricciones:
-            Primero debe existir un analisis ejecutado; de lo contrario se
+        Restrictions:
+            Primero debe existir un análisis ejecutado; de lo contrario se
             muestra un mensaje informativo.
         """
         if self.current_result is None:
