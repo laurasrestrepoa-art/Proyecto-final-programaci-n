@@ -1,6 +1,6 @@
 """
 =========================================================
-MODULO: results_panel.py
+MODULE: results_panel.py
 
 DESCRIPTION:
     Módulo que muestra los resultados numéricos e interpretativos del análisis
@@ -48,7 +48,7 @@ from src.utils.formatter import format_matrix, format_number, format_vector
 class ResultsPanel(QFrame):
     """
     Represents:
-    panel lateral de resultados matemáticos y estructurales.
+    Panel lateral de resultados matemáticos y estructurales.
 
     Input:
         - parent -> Componente visual padre opcional.
@@ -60,7 +60,7 @@ class ResultsPanel(QFrame):
     def __init__(self, parent: QWidget | None = None) -> None:
         """
         Calculate:
-        inicialización del panel de resultados.
+        Inicialización del panel de resultados.
 
         Input:
             - parent -> Componente visual padre opcional.
@@ -78,7 +78,7 @@ class ResultsPanel(QFrame):
     def _build_ui(self) -> None:
         """
         Calculate:
-        creación de etiquetas y caja de texto para resultados.
+        Creación de etiquetas y caja de texto para resultados.
 
         Input:
             - No recibe parametros.
@@ -106,7 +106,7 @@ class ResultsPanel(QFrame):
     def display_result(self, result: AnalysisResult) -> None:
         """
         Calculate:
-        conversión del resultado numérico en texto legible.
+        Conversión del resultado numérico en texto legible.
 
         Input:
             - result -> Resultado completo del análisis matricial.
