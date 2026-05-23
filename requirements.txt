@@ -1,4 +1,11 @@
+# Cálculos matriciales y manejo de arreglos
 numpy>=1.26
+
+# Generación de gráficas
 matplotlib>=3.8
+
+# Interfaz gráfica del programa
 PyQt6>=6.6
+
+# Generación de reportes PDF
 reportlab>=4.0
