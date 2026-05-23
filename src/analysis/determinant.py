@@ -1,29 +1,39 @@
 """
-MÓDULO: determinant.py
+=========================================================
+SCRIPT: determinant.py
 
-DESCRIPCIÓN:
-  Este módulo encargado de calcular el determinante de una matriz cuadrada. En el
-  proyecto se usa para matrices 2x2 y 3x3 ingresadas por el usuario.
+DESCRIPTION:
+    Este módulo es el encargado de calcular el determinante de matrices 
+    cuadradas 2x2 y 3x3 ingresadas por el usuario.
 
-PROPÓSITO:
-   Determinar si el sistema matricial tiene solución estable o si 
-   puede presentar singularidad estructural (cuando el determinate
-   es igual a cero).
+PURPOSE:
+    Determinar si el sistema matricial tiene solución estable o si 
+    puede presentar singularidad estructural, a partir del determinante
+    calculado.
 
 INPUT:
-   - Matriz cuadrada de NumPy con valores numericos.
+    - Matriz cuadrada de NumPy con valores numéricos.
 
 OUTPUT:
-   - Valor del determinante de la matriz como número decimal.
+    - Valor del determinante de la matriz como número decimal.
 
-TEMAS RELACIONADOS CON ESTE MODULO:
-  - Definicion de funciones
-  - Retorno de valores
-  - Determinante de matrices
+TOPICS RELATED TO THIS SCRIPT:
+    - Definición de funciones
+    - Retorno de valores
+    - Determinante de matrices
 
-AUTORES:
-Isabella Mejía Urueña
-Laura Sofía Restrepo Ardila
+AUTHORS:
+    Isabella Mejía Urueña
+    Laura Sofía Restrepo Ardila
+
+VERSION:
+    3.0
+
+CREATION DATE:
+    2026-05-15
+
+LAST UPDATE: 
+    2026-05-23
 =========================================================
 """
 
