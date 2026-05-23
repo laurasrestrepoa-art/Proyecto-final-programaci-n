@@ -1,37 +1,54 @@
 """
-MODULO: settings.py
+=========================================================
+MODULE: settings.py
 
-DESCRIPCION:
-Modulo de configuracion general del proyecto. Define rutas principales,
-carpetas de salida y constantes usadas por la aplicacion.
+DESCRIPTION:
+    Este es el módulo de configuración general del proyecto. 
+    Define rutas principales, carpetas de salida y constantes 
+    usadas por el programa.
 
-PROPOSITO:
-Centralizar las rutas para que los demas modulos no escriban direcciones de
-carpetas manualmente.
+PURPOSE:
+    Guardar y organizar las rutas principales utilizadas por los
+    diferentes módulos del proyecto. 
 
-ENTRADAS:
-No recibe datos del usuario. Calcula rutas a partir de la ubicacion del archivo.
+INPUTS:
+    - No recibe datos del usuario. 
+    - Calcula rutas a partir de la ubicación del archivo.
 
-SALIDAS:
-Constantes de ruta y funcion para crear carpetas de salida.
+OUTPUTS:
+    - Constantes de ruta 
+    - Creación de carpetas para guardar los resultados.
 
-TEMAS RELACIONADOS CON ESTE EJEMPLO:
-- Configuracion de proyecto
-- Manejo de rutas
-- Carpetas de salida
-- Reutilizacion de constantes
+TOPICS RELATED TO THIS MODULE:
+    - Configuración de proyecto
+    - Manejo de rutas
+    - Carpetas de salida
+    - Reutilización de constantes
 
-AUTORES:
-Isabella Mejía Urueña
-Laura Sofía Restrepo Ardila
+AUTHORS:
+    Isabella Mejía Urueña
+    Laura Sofía Restrepo Ardila
+
+VERSION:
+    3.0
+
+CREATION DATE:
+    2026-05-15
+
+LAST UPDATE: 
+    2026-05-23
+=========================================================
 """
 
 from __future__ import annotations
 
+# Se importa la librería utilizada para manejar rutas y carpetas 
 from pathlib import Path
 
-
+# Ruta principal del proyecto
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
+
+# Carpetas donde se guardarán los resultados y reportes
 DATA_DIR = PROJECT_ROOT / "data"
 OUTPUTS_DIR = PROJECT_ROOT / "outputs"
 REPORTS_DIR = OUTPUTS_DIR / "reports"
@@ -39,22 +56,25 @@ GRAPHS_DIR = OUTPUTS_DIR / "graphs"
 MATRICES_DIR = OUTPUTS_DIR / "matrices"
 
 APP_NAME = "StructuraLab"
-APP_SUBTITLE = "Analisis estructural matricial"
+APP_SUBTITLE = "Análisis estructural matricial"
 
 
 def ensure_output_dirs() -> None:
     """
-    Calcula:
-    creacion de carpetas necesarias para guardar resultados.
+    Esta función crea las carpetas necesarias 
+    para guardar los resultados.
 
-    Entradas:
-        No recibe parametros.
+    Input:
+        - No recibe parámetros.
 
-    Salida:
-        No retorna valores. Crea carpetas si no existen.
+    Output:
+        - No retorna valores, solo crea carpetas si no existen.
 
-    Restricciones:
-        Requiere permiso de escritura en la carpeta del proyecto.
+    Restrictions:
+        - Se requiere permiso de escritura en la carpeta del proyecto.
     """
+    
     for path in (OUTPUTS_DIR, REPORTS_DIR, GRAPHS_DIR, MATRICES_DIR):
         path.mkdir(parents=True, exist_ok=True)
+
+
