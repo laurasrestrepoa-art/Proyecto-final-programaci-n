@@ -1,49 +1,80 @@
 """
-MODULO: inverse.py
+=========================================================
+MODULE: inverse.py
 
-DESCRIPCION:
-Modulo encargado de calcular la matriz inversa cuando el determinante permite
-realizar la operacion.
+DESCRIPTION:
+    Este módulo contiene la función encargada
+    de calcular la matriz inversa de una matriz
+    cuadrada.
+    
+PURPOSE:
+    Determinar si una matriz puede invertirse
+    a partir de su determinante.
 
-PROPOSITO:
-Identificar si el sistema matricial puede invertirse. En analisis estructural,
-una matriz no invertible puede indicar singularidad o falta de restricciones.
+    En análisis estructural, una matriz no
+    invertible puede relacionarse con problemas
+    de singularidad o falta de restricciones
+    en el sistema.
 
-ENTRADAS:
-matrix -> Matriz cuadrada de NumPy.
+INPUTS:
+    - Matriz cuadrada de NumPy denominada matrix.
 
-SALIDAS:
-Matriz inversa A^-1 o None si la matriz es singular.
+OUTPUT:
+    - Matriz inversa de A.
+    - Valor None si la matriz es singular.
 
-TEMAS RELACIONADOS CON ESTE EJEMPLO:
-- Inversa de matrices
-- Manejo de excepciones
-- Sistemas lineales
-- Validacion matematica
+TOPICS RELATED TO THIS MODULE:
+    - Inversa de matrices
+    - Sistemas lineales
+    - Manejo de excepciones
+    - Validación matemática
 
-AUTORES:
-Isabella Mejía Urueña
-Laura Sofía Restrepo Ardila
+AUTHORS:
+    Isabella Mejía Urueña
+    Laura Sofía Restrepo Ardila
+
+VERSION:
+    4.0
+
+CREATION DATE:
+    2026-05-15
+
+LAST UPDATE:
+    2026-05-23
+=========================================================
 """
 
 from __future__ import annotations
 
+# Importación de la librería NumPy.
 import numpy as np
 
 
 def calculate_inverse(matrix: np.ndarray) -> np.ndarray | None:
     """
-    Calcula:
-    A^-1, donde A * A^-1 = I
+    Esta función calcula la matriz inversa
+    de una matriz cuadrada.
+    
+    Es decir, se calcula
+        A^-1
+        
+    Cumpliendo que: 
+        A * A^-1 = I
 
-    Entradas:
+    Donde: 
+        A -> Matriz original.
+        A^-1 -> Matriz inversa.
+        I -> Matriz identidad.
+
+    Inputs:
         matrix -> Matriz cuadrada A.
 
-    Salida:
-        Matriz inversa si existe. Si A es singular, retorna None.
+     Outputs:
+        - Matriz inversa si existe.
+        - Valor None si la matriz es singular.
 
     Restricciones:
-        La inversa solo existe cuando det(A) es diferente de cero.
+        - La inversa solo existe cuando det(A) es diferente de cero.
     """
     try:
         return np.linalg.inv(matrix)
