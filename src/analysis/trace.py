@@ -16,7 +16,7 @@ INPUT:
 OUTPUT:
     - Traza de la matriz como número decimal.
 
-TOPICS RELATED TO THIS EXAMPLE:
+TOPICS RELATED TO THIS MODULO:
     - Funciones matemáticas
     - Diagonal principal
     - Retorno de valores
