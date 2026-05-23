@@ -1,7 +1,7 @@
 # Proyecto final: StructureLab
 
 Este proyecto fue realizado con el fin de aplicar conceptos de álgebra lineal y programación
-en Python al análisis estructural mediante matrices. Este programa permite ingresar matrices 
+en Python al análisis estructural mediante matrices. El programa permite ingresar matrices 
 2x2 y 3x3 para realizar diferentes operaciones matemáticas y visualizar los resultados 
 mediante gráficas, además de mostrar una interpretación de los resultados obtenidos.
 
@@ -22,16 +22,16 @@ mediante gráficas, además de mostrar una interpretación de los resultados obt
 StructuraLab/
 |-- main.py
 |-- src/
-|   |-- analysis/
+|   |-- analisis/
 |   |-- gui/
-|   |-- storage/
-|   |-- utils/
-|   `-- visualization/
+|   |-- almacenar/
+|   |-- utilidades/
+|   `-- visualizacion/
 |-- data/
 |-- outputs/
 |   |-- graphs/
 |   |-- matrices/
-|   `-- reports/
+|   `-- reportes/
 |-- tests/
 |-- requirements.txt
 `-- README.md
@@ -39,7 +39,6 @@ StructuraLab/
 
 ## Instalación:
 
-Primero, se deberá ingresar a la terminar y poner lo siguiente:
 ```bash
 python -m venv .venv
 .venv\Scripts\activate
@@ -55,6 +54,6 @@ python main.py
 
 
 ### Nota:
-
-Este proyecto fue creado con fines académicos, por tal razón la interpretación estructural es 
-una aproximación basada en propiedades matriciales y demás temas vistos en el àlgebra lineal.
+Este proyecto fue creado con fines académicos, por tal razón la interpretación 
+estructural es una aproximación basada en propiedades matriciales y demás temas
+vistos en el álgebra lineal.
