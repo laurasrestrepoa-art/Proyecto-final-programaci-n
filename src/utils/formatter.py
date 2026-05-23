@@ -1,6 +1,6 @@
 """
 ========================================
-MODULO: formatter.py
+MODULE: formatter.py
 
 DESCRIPTION:
     Módulo con funciones auxiliares para convertir números, matrices y vectores en
@@ -16,7 +16,7 @@ INPUT:
 OUTPUT:
     - Cadenas de texto listas para mostrarse en pantalla o PDF.
 
-TOPICS RELATED TO THIS MODULO:
+TOPICS RELATED TO THIS MODULE:
     - Formato de salida
     - Números reales y complejos
     - Matrices
@@ -47,7 +47,7 @@ import numpy as np
 def format_number(value: complex | float | int, decimals: int = 4) -> str:
     """
     Calculate:
-    representación textual de un número real o complejo.
+    Representación textual de un número real o complejo.
 
     Fórmula usada:
     valor_formateado = número redondeado a una cantidad fija de decimales.
@@ -77,7 +77,7 @@ def format_number(value: complex | float | int, decimals: int = 4) -> str:
 def format_matrix(matrix: np.ndarray | None, decimals: int = 3) -> str:
     """
     Calculate:
-    representación de una matriz como texto por filas.
+    Representación de una matriz como texto por filas.
 
     Input:
         - matrix -> Matriz de NumPy o None.
@@ -100,7 +100,7 @@ def format_matrix(matrix: np.ndarray | None, decimals: int = 3) -> str:
 def format_vector(vector: np.ndarray, decimals: int = 4) -> str:
     """
     Calculate:
-    representación de un vector en una sola linea.
+    Representación de un vector en una sola linea.
 
     Input:
         - vector -> Vector de NumPy.
