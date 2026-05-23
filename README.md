@@ -24,16 +24,16 @@ de la matriz con conceptos como estabilidad, rigidez, deformación y modos de re
 StructuraLab/
 |-- main.py
 |-- src/
-|   |-- analisis/
+|   |-- analysis/
 |   |-- gui/
-|   |-- almacenar/
-|   |-- utilidades/
-|   `-- visualizacion/
+|   |-- storage/
+|   |-- utils/
+|   `-- visualization/
 |-- data/
 |-- outputs/
 |   |-- graphs/
 |   |-- matrices/
-|   `-- reportes/
+|   `-- reports/
 |-- tests/
 |-- requirements.txt
 `-- README.md
