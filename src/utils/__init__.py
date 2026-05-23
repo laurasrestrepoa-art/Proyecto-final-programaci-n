@@ -1,24 +1,35 @@
 """
-MODULO: utils/__init__.py
+=========================================================
+SCRIPT: utils/__init__.py
 
-DESCRIPCION:
-Archivo que identifica la carpeta utils como paquete de herramientas auxiliares.
+DESCRIPTION:
+    Archivo que identifica la carpeta utils como paquete de herramientas auxiliares.
 
-PROPOSITO:
-Agrupar funciones de formato y validacion usadas por varios modulos.
+PURPOSE:
+    Agrupar funciones de formato y validación usadas por varios módulos.
 
-ENTRADAS:
-No recibe entradas.
+INPUT:
+    - No recibe entradas.
 
-SALIDAS:
-Paquete de utilidades disponible para importacion.
+OUTPUT:
+    - Paquete de utilidades disponible para importacion.
 
-TEMAS RELACIONADOS CON ESTE EJEMPLO:
-- Utilidades
-- Validaciones
-- Formato de salida
+TOPICS RELATED TO THIS SRIPT:
+    - Utilidades
+    - Validaciones
+    - Formato de salida
 
-AUTORES:
-Isabella Mejía Urueña
-Laura Sofía Restrepo Ardila
+AUTHORS:
+    Isabella Mejía Urueña
+    Laura Sofía Restrepo Ardila
+
+VERSION:
+    3.0
+
+CREATION DATE:
+    2026-05-15
+
+LAST UPDATE: 
+    2026-05-23
+=========================================================
 """
