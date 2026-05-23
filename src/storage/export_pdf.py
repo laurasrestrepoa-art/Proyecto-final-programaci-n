@@ -29,7 +29,7 @@ AUTHORS:
     Laura Sofía Restrepo Ardila
 
 VERSION:
-    2.0
+    3.0
 
 CREATION DATE:
     2026-05-15
