@@ -25,6 +25,7 @@ StructuraLab/
 |-- main.py
 |-- src/
 |   |-- analysis/
+|   |-- config/
 |   |-- gui/
 |   |-- storage/
 |   |-- utils/
