@@ -1,6 +1,6 @@
 """
 =========================================================
-MODULO: storage/__init__.py
+SCRIPT: storage/__init__.py
 
 DESCRIPTION:
     Archivo que identifica la carpeta storage como paquete de guardado y exportación.
@@ -14,7 +14,7 @@ INPUT:
 OUTPUT:
     - Paquete de almacenamiento disponible para importación.
 
-TOPICS RELATED TO THIS MODULO:
+TOPICS RELATED TO THIS SCRIPT:
   - Exportación de archivos
   - Historial
   - Reportes
