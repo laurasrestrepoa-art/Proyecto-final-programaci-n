@@ -20,7 +20,7 @@ INPUT:
 OUTPUT:
     - Texto en español con interpretación matemática e ingenieril.
 
-TOPICS RELATED TO THIS EXAMPLE:
+TOPICS RELATED TO THIS MODULO:
     - Interpretación de resultados
     - Análisis estructural matricial
     - Modos de deformación
