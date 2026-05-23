@@ -41,7 +41,7 @@ StructuraLab/
 
 ## Instalación:
 
-Después de descargar y descomprimir el proyecto, abre `cmd` dentro de la carpeta principal y ejecuta:
+Después de descargar y descomprimir el proyecto, abraa `cmd` dentro de la carpeta principal y ejecute:
 
 ```cmd
 pip install -r requirements.txt
