@@ -1,6 +1,6 @@
 """
 ========================================
-MODULO: main.py
+MODULE: main.py
 
 DESCRIPTION:
     Archivo principal del proyecto StructuraLab. Contiene la función que inicia la
@@ -18,7 +18,7 @@ OUTPUT:
     - Retorna un codigo entero de finalizacion. Si la aplicación abre correctamente,
     devuelve el codigo generado por PyQt6; si faltan dependencias, devuelve 1.
 
-TOPICS RELATED TO THIS MODULO
+TOPICS RELATED TO THIS MODULE:
     - Creación de módulo principal
     - Importación de módulos externos
     - Inicialización de interfaz gráfica
@@ -47,7 +47,7 @@ import sys
 def main() -> int:
     """
     Calculate:
-    inicio del ciclo gráfico de la aplicación.
+    Inicio del ciclo gráfico de la aplicación.
 
     Fórmula usada:
     app = QApplication(sys.argv)
