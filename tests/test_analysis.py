@@ -21,8 +21,9 @@ TEMAS RELACIONADOS CON ESTE EJEMPLO:
 - Resultados esperados
 - Calidad de software
 
-AUTOR:
-Laura y equipo de trabajo
+AUTORES:
+Isabella Mejía Urueña
+Laura Sofía Restrepo Ardila
 """
 
 from __future__ import annotations
