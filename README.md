@@ -63,13 +63,6 @@ hecha en codigo PyQt6, lista para ejecutar y modificar.
 python -m unittest discover tests
 ```
 
-## Idea para la sustentacion
-
-Puedes presentar el proyecto asi:
-
-> El sistema implementa principios del metodo matricial estructural, integrando
-> algebra lineal, analisis modal simplificado y visualizacion dinamica para
-> interpretar estabilidad, rigidez, desplazamientos y modos de deformacion.
 
 ## Notas importantes
 
