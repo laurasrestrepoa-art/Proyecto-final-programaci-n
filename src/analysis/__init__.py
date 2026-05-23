@@ -15,10 +15,10 @@ INPUT:
 OUTPUT:
     Paquete de análisis disponible para importación.
 
-TEMAS RELACIONADOS CON ESTE EJEMPLO:
-- Modularidad
-- Algebra lineal
-- Analisis estructural
+TOPICS RELATED TO THIS SCRIPT:
+    - Modularidad
+    - Álgebra lineal
+    - Análisis estructural
 
 AUTORES:
 Isabella Mejía Urueña
