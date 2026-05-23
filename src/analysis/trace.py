@@ -7,20 +7,20 @@ DESCRIPTION:
     de los elementos ubicados en la diagonal principal.
 
 PURPOSE:
-    Complementar el analisis matricial mostrando una medida global de rigidez
-    asociada a los terminos diagonales de la matriz.
+    Complementar el análisis matricial mostrando una medida global de rigidez
+    asociada a los términos diagonales de la matriz.
 
 INPUT:
     - matrix -> Matriz cuadrada de NumPy.
 
 OUTPUT:
-    - Traza de la matriz como numero decimal.
+    - Traza de la matriz como número decimal.
 
 TOPICS RELATED TO THIS EXAMPLE:
-    - Funciones matematicas
+    - Funciones matemáticas
     - Diagonal principal
     - Retorno de valores
-    - Algebra lineal
+    - Álgebra lineal
 
 AUTHORS:
     Isabella Mejía Urueña
