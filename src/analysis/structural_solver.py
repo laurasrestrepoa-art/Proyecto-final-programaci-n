@@ -1,30 +1,41 @@
 """
-MODULO: structural_solver.py
+========================================
+SCRIPT: structural_solver.py
 
-DESCRIPCION:
-Modulo central del analisis. Une los calculos de determinante, traza, inversa,
-transpuesta, valores propios, intensidad nodal, estabilidad e interpretacion.
+DESCRIPTION:
+    Modulo central del analisis. Une los calculos de determinante, traza, inversa,
+    transpuesta, valores propios, intensidad nodal, estabilidad e interpretacion.
 
-PROPOSITO:
-Evitar que la interfaz grafica realice calculos directamente. Este modulo actua
-como el motor matematico del proyecto StructuraLab.
+PURPOSE:
+    Evitar que la interfaz grafica realice calculos directamente. Este modulo actua
+    como el motor matematico del proyecto StructuraLab.
 
-ENTRADAS:
-matrix -> Matriz cuadrada 2x2 o 3x3 ingresada por el usuario.
+INPUT:
+    - matrix -> Matriz cuadrada 2x2 o 3x3 ingresada por el usuario.
 
-SALIDAS:
-Objeto AnalysisResult con todos los resultados numericos, graficos e
-interpretativos requeridos por la interfaz y los reportes.
+OUTPUT:
+    - Objeto AnalysisResult con todos los resultados numericos, graficos e
+      interpretativos requeridos por la interfaz y los reportes.
 
-TEMAS RELACIONADOS CON ESTE EJEMPLO:
-- Programacion modular
-- Integracion de funciones
-- Analisis matricial
-- Retorno de objetos estructurados
+TOPICS RELATED TO THIS EXAMPLE:
+    - Programacion modular
+    - Integracion de funciones
+    - Analisis matricial
+    - Retorno de objetos estructurados
 
-AUTORES:
-Isabella Mejía Urueña
-Laura Sofía Restrepo Ardila
+AUTHORS:
+    Isabella Mejía Urueña
+    Laura Sofía Restrepo Ardila
+
+VERSION:
+    3.O
+
+CREATION DATE:
+    2026-05-15
+
+LAST UPDATE:
+    2026-05-23
+========================================
 """
 
 from __future__ import annotations
@@ -45,15 +56,15 @@ from src.analysis.transpose import calculate_transpose
 @dataclass(frozen=True)
 class AnalysisResult:
     """
-    Representa:
+    Represents:
     paquete completo de resultados generados por el analisis.
 
-    Entradas:
+    Input:
         matrix, determinant, trace, inverse, transpose, eigenvalues,
         eigenvectors, modal_participation, nodal_intensity, stability e
         interpretation.
 
-    Salida:
+    Output:
         Objeto organizado para que GUI, reportes y pruebas usen la misma
         informacion sin repetir calculos.
     """
@@ -73,16 +84,16 @@ class AnalysisResult:
 
 def calculate_nodal_intensity(matrix: np.ndarray) -> np.ndarray:
     """
-    Calcula:
+    Calculate:
     intensidad_i = suma(|fila_i|) / maximo_de_intensidades
 
-    Entradas:
+    Input:
         matrix -> Matriz A.
 
-    Salida:
+    Output:
         Vector normalizado de intensidad por nodo, con valores entre 0 y 1.
 
-    Restricciones:
+    Restrictions:
         Si todas las intensidades son cero, retorna el vector sin normalizar
         para evitar division entre cero.
     """
@@ -95,18 +106,18 @@ def calculate_nodal_intensity(matrix: np.ndarray) -> np.ndarray:
 
 def analyze_matrix(matrix: np.ndarray) -> AnalysisResult:
     """
-    Calcula:
+    Calculate:
     analisis completo de una matriz estructural:
     det(A), traza(A), A^-1, A^T, valores propios, vectores propios,
     participacion modal, intensidad nodal, estabilidad e interpretacion.
 
-    Entradas:
+    Input:
         matrix -> Matriz cuadrada 2x2 o 3x3.
 
-    Salida:
+    Output:
         AnalysisResult con todos los resultados del analisis.
 
-    Restricciones:
+    Restrictions:
         La matriz ya debe haber sido validada antes de llamar esta funcion.
     """
     determinant = calculate_determinant(matrix)
