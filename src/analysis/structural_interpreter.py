@@ -1,34 +1,44 @@
 """
+========================================
 MODULO: structural_interpreter.py
 
-DESCRIPCION:
-Modulo que genera una interpretacion escrita del analisis estructural a partir
-de determinante, valores propios, vectores propios y clasificacion de
-estabilidad.
+DESCRIPTION:
+   Este módulo genera una interpretación escrita del análisis estructural a partir del determinante, 
+   los valores propios, los vectores propios y la clasificación de estabilidad.
 
-PROPOSITO:
-Convertir resultados numericos en conclusiones comprensibles para el taller,
-relacionando algebra lineal con estabilidad, rigidez, torsion y deformacion.
+PURPOSE:
+    Convertir resultados numéricos en conclusiones comprensibles para el taller, relacionando 
+    el álgebra lineal con la estabilidad, la rigidez, la torsión y la deformación.
 
-ENTRADAS:
-matrix -> Matriz analizada.
-determinant -> Determinante de la matriz.
-eigenvalues -> Valores propios.
-eigenvectors -> Vectores propios.
-stability -> Resultado de clasificacion estructural.
+INPUT:
+    - matrix -> Matriz analizada.
+    - determinant -> Determinante de la matriz.
+    - eigenvalues -> Valores propios.
+    - eigenvectors -> Vectores propios.
+    - stability -> Resultado de clasificacion estructural.
 
-SALIDAS:
-Texto en espanol con interpretacion matematica e ingenieril.
+OUTPUT:
+    - Texto en español con interpretación matemática e ingenieril.
 
-TEMAS RELACIONADOS CON ESTE EJEMPLO:
-- Interpretacion de resultados
-- Analisis estructural matricial
-- Modos de deformacion
-- Conclusiones automaticas
+TOPICS RELATED TO THIS EXAMPLE:
+    - Interpretación de resultados
+    - Análisis estructural matricial
+    - Modos de deformación
+    - Conclusiones automáticas
 
-AUTORES:
-Isabella Mejía Urueña
-Laura Sofía Restrepo Ardila
+AUTHORS:
+    Isabella Mejía Urueña
+    Laura Sofía Restrepo Ardila
+
+VERSION:
+    3.O
+
+CREATION DATE:
+    2026-05-15
+
+LAST UPDATE:
+    2026-05-23
+========================================
 """
 
 from __future__ import annotations
@@ -46,25 +56,25 @@ def interpret_structure(
     stability: StabilityResult,
 ) -> str:
     """
-    Calcula:
-    texto interpretativo a partir de reglas de analisis:
+    Calculate:
+    texto interpretativo a partir de reglas de análisis:
     - det(A) cercano a 0 indica posible singularidad.
     - lambda positivos sugieren estabilidad.
     - lambda negativos sugieren modo critico.
     - vectores propios indican direccion de deformacion.
 
-    Entradas:
-        matrix -> Matriz A.
-        determinant -> Determinante det(A).
-        eigenvalues -> Valores propios lambda.
-        eigenvectors -> Vectores propios por columnas.
-        stability -> Objeto con indicadores de riesgo.
+    Input:
+        - matrix -> Matriz A.
+        - determinant -> Determinante det(A).
+        - eigenvalues -> Valores propios lambda.
+        - eigenvectors -> Vectores propios por columnas.
+        - stability -> Objeto con indicadores de riesgo.
 
-    Salida:
-        Cadena de texto con analisis estructural y conclusion global.
+    Output:
+        - Cadena de texto con análisis estructural y conclusión global.
 
-    Restricciones:
-        La interpretacion es educativa y depende de reglas simplificadas.
+    Restrictions:
+        - La interpretación es educativa y depende de reglas simplificadas.
     """
     lines: list[str] = []
 
@@ -97,13 +107,13 @@ def interpret_structure(
     if stability.near_zero_eigenvalues:
         lines.append(
             "Hay valores propios cercanos a cero. Esto puede indicar un modo de "
-            "deformacion con muy baja resistencia."
+            "deformación con muy baja resistencia."
         )
 
     if stability.is_diagonally_dominant:
         lines.append(
             "La matriz presenta dominancia diagonal. En terminos de rigidez, "
-            "cada nodo resiste mas de lo que se acopla con los demas nodos."
+            "cada nodo resiste mas de lo que se acopla con los demás nodos."
         )
     else:
         lines.append(
@@ -113,12 +123,12 @@ def interpret_structure(
 
     if stability.is_symmetric:
         lines.append(
-            "La matriz es simetrica, una propiedad esperada en muchas matrices "
+            "La matriz es simétrica, una propiedad esperada en muchas matrices "
             "de rigidez estructural idealizadas."
         )
     else:
         lines.append(
-            "La matriz no es simetrica. Esto puede representar direccionamiento "
+            "La matriz no es simétrica. Esto puede representar direccionamiento "
             "de cargas, efectos no conservativos o datos que requieren revision."
         )
 
@@ -140,12 +150,12 @@ def interpret_structure(
         if len(real_vector) >= 2 and abs(real_vector[0] - real_vector[1]) > 0.30:
             lines.append(
                 "- Diferencia importante entre componentes X e Y: posible "
-                "rotacion, torsion o deformacion lateral."
+                "rotación, torsión o deformación lateral."
             )
         else:
             lines.append(
                 "- Las componentes principales son relativamente equilibradas, "
-                "lo que sugiere deformacion mas uniforme."
+                "lo que sugiere deformación más uniforme."
             )
 
         if len(real_vector) == 3 and abs(real_vector[2]) > 0.45:
@@ -160,7 +170,7 @@ def interpret_structure(
     if stability.risk_level == "Bajo":
         lines.append(
             "La estructura matricial presenta condiciones favorables: estabilidad, "
-            "rigidez dominante y respuesta matematica consistente."
+            "rigidez dominante y respuesta matemática consistente."
         )
     elif stability.risk_level == "Critico":
         lines.append(
