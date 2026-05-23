@@ -1,6 +1,6 @@
 """
 =========================================================
-SCRIPT: determinant.py
+MODULE: determinant.py
 
 DESCRIPTION:
     Este módulo es el encargado de calcular el determinante de matrices 
@@ -17,7 +17,7 @@ INPUT:
 OUTPUT:
     - Valor del determinante de la matriz como número decimal.
 
-TOPICS RELATED TO THIS SCRIPT:
+TOPICS RELATED TO THIS MODULE:
     - Definición de funciones
     - Retorno de valores
     - Determinante de matrices
@@ -39,6 +39,8 @@ LAST UPDATE:
 
 from __future__ import annotations
 
+# Se importa la librería NumPy, ya que permite trabajar con
+# matrices y operaciones algebraicas más avanzadas. 
 import numpy as np
 
 
@@ -56,4 +58,5 @@ def calculate_determinant(matrix: np.ndarray) -> float:
     Restrictions:
       - La matriz debe ser cuadrada.
     """
+    
     return float(np.linalg.det(matrix))
