@@ -2,7 +2,7 @@
 
 StructuraLab es una aplicacion de escritorio para analisis estructural matricial
 en ingenieria civil. Permite analizar matrices 2x2 y 3x3, calcular propiedades
-matematicas y mostrar una interpretacion fisica con graficas profesionales.
+matematicas y mostrar una interpretación física con gráficas que permitan entender de un mejor forma el analisis.
 
 ## Funcionalidades
 
