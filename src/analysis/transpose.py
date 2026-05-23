@@ -3,7 +3,7 @@
 MODULO: transpose.py
 
 DESCRIPTION:
-    Este Módulo es el encargado de cálcular la matriz transpuesta. La transpuesta cambia filas
+    Este Módulo es el encargado de calcular la matriz transpuesta. La transpuesta cambia filas
     por columnas y permite revisar simétria de la matriz.
 
 PURPOSE:
