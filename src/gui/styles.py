@@ -16,7 +16,7 @@ INPUT:
 OUTPUT:
     - APP_STYLESHEET -> Estilos aplicados a la ventaña principal.
 
-TOPICS RELATED TO THIS MODULE:
+TOPICS RELATED TO THIS SCRIPT:
     - Interfaz gráfica
     - Estilos QSS
     - Modo oscuro
