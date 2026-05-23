@@ -1,6 +1,6 @@
 """
 ========================================
-SCRIPT: structural_solver.py
+MODULO: structural_solver.py
 
 DESCRIPTION:
     Este es el módulo central del analisis. Une los calculos de determinante, traza, inversa,
