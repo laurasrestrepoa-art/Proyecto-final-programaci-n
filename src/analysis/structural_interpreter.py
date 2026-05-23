@@ -15,7 +15,7 @@ INPUT:
     - determinant -> Determinante de la matriz.
     - eigenvalues -> Valores propios.
     - eigenvectors -> Vectores propios.
-    - stability -> Resultado de clasificacion estructural.
+    - stability -> Resultado de clasificación estructural.
 
 OUTPUT:
     - Texto en español con interpretación matemática e ingenieril.
@@ -61,7 +61,7 @@ def interpret_structure(
     - det(A) cercano a 0 indica posible singularidad.
     - lambda positivos sugieren estabilidad.
     - lambda negativos sugieren modo critico.
-    - vectores propios indican direccion de deformacion.
+    - vectores propios indican dirección de deformación.
 
     Input:
         - matrix -> Matriz A.
@@ -100,7 +100,7 @@ def interpret_structure(
 
     if stability.negative_eigenvalues:
         lines.append(
-            "Se detectaron valores propios negativos. En interpretacion "
+            "Se detectaron valores propios negativos. En interpretación "
             "estructural esto representa un posible modo critico o inestable."
         )
 
@@ -112,8 +112,8 @@ def interpret_structure(
 
     if stability.is_diagonally_dominant:
         lines.append(
-            "La matriz presenta dominancia diagonal. En terminos de rigidez, "
-            "cada nodo resiste mas de lo que se acopla con los demás nodos."
+            "La matriz presenta dominancia diagonal. En términos de rigidez, "
+            "cada nodo resiste más de lo que se acopla con los demás nodos."
         )
     else:
         lines.append(
