@@ -1,29 +1,40 @@
 """
+=========================================================
 MODULO: results_panel.py
 
-DESCRIPCION:
-Modulo que muestra los resultados numericos e interpretativos del analisis
-estructural en la interfaz grafica.
+DESCRIPTION:
+    Módulo que muestra los resultados numéricos e interpretativos del análisis
+    estructural en la interfaz gráfica.
 
-PROPOSITO:
-Presentar al usuario el determinante, traza, inversa, transpuesta, valores
-propios, vectores propios, nivel de riesgo y conclusion estructural.
+PURPOSE:
+    Presentar al usuario el determinante, traza, inversa, transpuesta, valores
+    propios, vectores propios, nivel de riesgo y conclusión estructural.
 
-ENTRADAS:
-result -> Objeto AnalysisResult con los datos calculados.
+INPUT:
+    - result -> Objeto AnalysisResult con los datos calculados.
 
-SALIDAS:
-Texto organizado dentro de un panel de resultados.
+OUTPUT:
+    - Texto organizado dentro de un panel de resultados.
 
-TEMAS RELACIONADOS CON ESTE EJEMPLO:
-- Visualizacion de resultados
-- Interfaz grafica
-- Formato de matrices
-- Interpretacion estructural
+TOPICS RELATED TO THIS MODULE:
+    - Visualización de resultados
+    - Interfaz gráfica
+    - Formato de matrices
+    - Interpretación estructural
 
-AUTORES:
-Isabella Mejía Urueña
-Laura Sofía Restrepo Ardila
+AUTHORS:
+    Isabella Mejía Urueña
+    Laura Sofía Restrepo Ardila
+
+VERSION:
+    3.0
+
+CREATION DATE:
+    2026-05-15
+
+LAST UPDATE: 
+    2026-05-23
+=========================================================
 """
 
 from __future__ import annotations
@@ -36,29 +47,29 @@ from src.utils.formatter import format_matrix, format_number, format_vector
 
 class ResultsPanel(QFrame):
     """
-    Representa:
-    panel lateral de resultados matematicos y estructurales.
+    Represents:
+    panel lateral de resultados matemáticos y estructurales.
 
-    Entradas:
-        parent -> Componente visual padre opcional.
+    Input:
+        - parent -> Componente visual padre opcional.
 
-    Salida:
-        Componente visual listo para agregarse a la ventana principal.
+    Output:
+        - Componente visual listo para agregarse a la ventana principal.
     """
 
     def __init__(self, parent: QWidget | None = None) -> None:
         """
-        Calcula:
-        inicializacion del panel de resultados.
+        Calculate:
+        inicialización del panel de resultados.
 
-        Entradas:
-            parent -> Componente visual padre opcional.
+        Input:
+            - parent -> Componente visual padre opcional.
 
-        Salida:
-            No retorna valores. Construye el panel visual.
+        Output:
+            - No retorna valores. Construye el panel visual.
 
-        Restricciones:
-            Debe usarse dentro de una aplicacion PyQt6.
+        Restrictions:
+            Debe usarse dentro de una aplicación PyQt6.
         """
         super().__init__(parent)
         self.setObjectName("ResultsPanel")
@@ -66,17 +77,17 @@ class ResultsPanel(QFrame):
 
     def _build_ui(self) -> None:
         """
-        Calcula:
-        creacion de etiquetas y caja de texto para resultados.
+        Calculate:
+        creación de etiquetas y caja de texto para resultados.
 
-        Entradas:
-            No recibe parametros.
+        Input:
+            - No recibe parametros.
 
-        Salida:
-            No retorna valores. Agrega elementos al panel.
+        Output:
+            - No retorna valores. Agrega elementos al panel.
 
-        Restricciones:
-            Solo define interfaz; no realiza calculos matematicos.
+        Restrictions:
+            Solo define interfaz; no realiza cálculos matemáticos.
         """
         layout = QVBoxLayout(self)
         layout.setContentsMargins(16, 16, 16, 16)
@@ -94,16 +105,16 @@ class ResultsPanel(QFrame):
 
     def display_result(self, result: AnalysisResult) -> None:
         """
-        Calcula:
-        conversion del resultado numerico en texto legible.
+        Calculate:
+        conversión del resultado numérico en texto legible.
 
-        Entradas:
-            result -> Resultado completo del analisis matricial.
+        Input:
+            - result -> Resultado completo del análisis matricial.
 
         Salida:
-            No retorna valores. Escribe el resumen en el QTextEdit.
+            - No retorna valores. Escribe el resumen en el QTextEdit.
 
-        Restricciones:
+        Restrictions:
             Requiere que result haya sido generado por analyze_matrix.
         """
         lines: list[str] = []
