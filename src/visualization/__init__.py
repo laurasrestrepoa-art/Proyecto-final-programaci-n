@@ -1,25 +1,36 @@
 """
-MODULO: visualization/__init__.py
+=========================================================
+SCRIPT: visualization/__init__.py
 
-DESCRIPCION:
-Archivo que identifica la carpeta visualization como paquete de graficas.
+DESCRIPTION:
+    Archivo que identifica la carpeta visualization como paquete de gráficas.
 
-PROPOSITO:
-Agrupar las funciones que construyen figuras para mostrar resultados del
-analisis estructural.
+PURPOSE:
+    Agrupar las funciones que construyen fíguras para mostrar resultados del
+    análisis estructural.
 
-ENTRADAS:
-No recibe entradas.
+INPUT:
+    - No recibe entradas.
 
-SALIDAS:
-Paquete de visualizacion disponible para importacion.
+OUTPUT:
+    - Paquete de visualización disponible para importación.
 
-TEMAS RELACIONADOS CON ESTE EJEMPLO:
-- Graficas
-- Matplotlib
-- Visualizacion estructural
+TOPICS RELATED TO THIS SRIPT:
+    - Graficas
+    - Matplotlib
+    - Visualización estructural
 
-AUTORES:
-Isabella Mejía Urueña
-Laura Sofía Restrepo Ardila
+AUTHORS:
+    Isabella Mejía Urueña
+    Laura Sofía Restrepo Ardila
+
+VERSION:
+    3.0
+
+CREATION DATE:
+    2026-05-15
+
+LAST UPDATE: 
+    2026-05-23
+=========================================================
 """
