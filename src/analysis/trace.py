@@ -1,6 +1,6 @@
 """
 ========================================
-SCRIPT: trace.py
+MODULO: trace.py
 
 DESCRIPTION:
     Este Módulo es el encargado de calcular la traza de una matriz cuadrada, es decir, la suma
