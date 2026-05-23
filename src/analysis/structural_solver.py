@@ -3,7 +3,7 @@
 SCRIPT: structural_solver.py
 
 DESCRIPTION:
-    Modulo central del analisis. Une los calculos de determinante, traza, inversa,
+    Este es el módulo central del analisis. Une los calculos de determinante, traza, inversa,
     transpuesta, valores propios, intensidad nodal, estabilidad e interpretacion.
 
 PURPOSE:
