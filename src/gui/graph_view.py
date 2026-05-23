@@ -4,7 +4,7 @@ MODULO: graph_view.py
 
 DESCRIPTION:
     Este módulo crea el panel gráfico de la interfaz. Muestra las gráficas del
-    análisis en pestanas: estructura, mapa de calor, vectores y modos.
+    análisis en pestañas: estructura, mapa de calor, vectores y modos.
 
 PURPOSE:
     Integrar las figuras de Matplotlib dentro de la ventana PyQt6 sin mezclar el
@@ -12,14 +12,14 @@ PURPOSE:
 
 INPUT:
     - result -> Objeto AnalysisResult generado por el análisis.
-    - widget -> Elemento gráfico que se desea ubicar dentro de una pestana.
+    - widget -> Elemento gráfico que se desea ubicar dentro de una pestaña.
 
 OUTPUT:
     - Panel QTabWidget con gráficas actualizadas.
 
 TOPICS RELATED TO THIS MODULE:
     - Interfaz gráfica
-    - Pestanas
+    - Pestañas
     - Integración Matplotlib y PyQt6
     - Visualización de resultados
 
@@ -50,29 +50,29 @@ from src.visualization.plot_builders import build_all_figures
 
 class GraphView(QTabWidget):
     """
-    Representa:
-    area de graficas organizada en pestanas.
+    Represents:
+    área de gráficas organizada en pestañas.
 
-    Entradas:
-        parent -> Componente visual padre opcional de PyQt6.
+    Input:
+        - parent -> Componente visual padre opcional de PyQt6.
 
-    Salida:
-        Objeto visual que se inserta en la ventana principal.
+    Output:
+        - Objeto visual que se inserta en la ventana principal.
     """
 
     def __init__(self, parent: QWidget | None = None) -> None:
         """
-        Calcula:
-        inicializacion del panel de graficas con una pestana de bienvenida.
+        Calculate:
+        inicialización del panel de gráficas con una pestaña de bienvenida.
 
-        Entradas:
-            parent -> Componente visual padre opcional.
+        Input:
+            - parent -> Componente visual padre opcional.
 
-        Salida:
-            No retorna valores. Configura el estado inicial del panel.
+        Output:
+            - No retorna valores. Configura el estado inicial del panel.
 
-        Restricciones:
-            Debe ejecutarse dentro de una aplicacion PyQt6 activa.
+        Restrictions:
+            Debe ejecutarse dentro de una aplicación PyQt6 activa.
         """
         super().__init__(parent)
         self.figures: dict[str, Figure] = {}
@@ -82,17 +82,17 @@ class GraphView(QTabWidget):
 
     def _wrap_widget(self, widget: QWidget) -> QWidget:
         """
-        Calcula:
-        contenedor grafico para insertar un widget dentro de una pestana.
+        Calculate:
+        contenedor gráfico para insertar un widget dentro de una pestaña.
 
-        Entradas:
+        Input:
             widget -> Elemento visual que se desea mostrar.
 
-        Salida:
+        Output:
             Componente visual contenedor con margenes internos.
 
-        Restricciones:
-            El parametro debe ser un componente visual valido de PyQt6.
+        Restrictions:
+            El parámetro debe ser un componente visual válido de PyQt6.
         """
         container = QWidget()
         layout = QVBoxLayout(container)
@@ -102,16 +102,16 @@ class GraphView(QTabWidget):
 
     def display_result(self, result: AnalysisResult) -> None:
         """
-        Calcula:
-        actualizacion de todas las graficas a partir de un nuevo analisis.
+        Calculate:
+        actualización de todas las gráficas a partir de un nuevo análisis.
 
-        Entradas:
-            result -> Resultado completo de analyze_matrix.
+        Input:
+            - result -> Resultado completo de analyze_matrix.
 
-        Salida:
-            No retorna valores. Reemplaza las pestanas por graficas nuevas.
+        Output:
+            - No retorna valores. Reemplaza las pestañas por gráficas nuevas.
 
-        Restricciones:
+        Restrictions:
             El resultado debe contener matriz, valores propios e intensidad
             nodal calculados correctamente.
         """
