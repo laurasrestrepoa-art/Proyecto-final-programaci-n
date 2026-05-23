@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Portico estable 2x2",
+    "size": 2,
+    "matrix": [
+      [4, -2],
+      [-2, 4]
+    ]
+  },
+  {
+    "name": "Sistema rigido 3x3",
+    "size": 3,
+    "matrix": [
+      [6, -2, 1],
+      [-2, 5, 0],
+      [1, 0, 3]
+    ]
+  },
+  {
+    "name": "Caso critico 2x2",
+    "size": 2,
+    "matrix": [
+      [2, 4],
+      [1, 2]
+    ]
+  }
+]
