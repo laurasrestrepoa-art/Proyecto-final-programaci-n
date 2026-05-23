@@ -1,56 +1,83 @@
 """
-MODULO: save_results.py
+=========================================================
+MODULE: save_results.py
 
-DESCRIPCION:
-Modulo encargado de guardar un historial resumido de los analisis realizados en
-formato JSON.
+DESCRIPTION:
+    Este es el módulo encargado de guardar un historial resumido 
+    de los análisis realizados por el programa.
 
-PROPOSITO:
-Permitir que el proyecto conserve evidencia de matrices analizadas, resultados
-principales y niveles de riesgo.
+    La información se almacena en un archivo JSON, el cual permite
+    organizar datos estructurados de manera más sencilla.
 
-ENTRADAS:
-result -> Objeto AnalysisResult generado por el motor de analisis.
+PURPOSE:
+    Permitir que el proyecto conserve evidencia de matrices analizadas, 
+    junto con sus resultados principales y niveles de riesgo obtenidos.
 
-SALIDAS:
-Ruta del archivo history.json actualizado.
+INPUT:
+    - Resultado del análisis denominado result.
 
-TEMAS RELACIONADOS CON ESTE EJEMPLO:
-- Persistencia de datos
-- Archivos JSON
-- Historial de ejecucion
-- Resultados de analisis
+OUTPUT:
+    - Ruta del archivo history.json actualizado.
 
-AUTORES:
-Isabella Mejía Urueña
-Laura Sofía Restrepo Ardila
+TOPICS RELATED TO THIS MODULE:
+    - Persistencia de datos
+    - Archivos JSON
+    - Historial de ejecución
+    - Resultados de análisis
+
+AUTHORS:
+    Isabella Mejía Urueña
+    Laura Sofía Restrepo Ardila
+
+VERSION:
+    3.0
+
+CREATION DATE:
+    2026-05-15
+
+LAST UPDATE:
+    2026-05-23
+=========================================================
 """
 
 from __future__ import annotations
 
+# Se importa la librería json para guardar información
+# en archivos JSON
 import json
+
+# Se importan datetime para registar fecha y hora de cada análisis
+# y tmabién Path para el manejo de rutas y carpetas del proyecto.
 from datetime import datetime
 from pathlib import Path
 
+# Resultado principal del análisis estructural
+# y carpetas y funciones de configuración
 from src.analysis.structural_solver import AnalysisResult
 from src.config.settings import MATRICES_DIR, ensure_output_dirs
 
 
 def append_history(result: AnalysisResult) -> Path:
     """
-    Calcula:
-    adicion de un nuevo registro al historial.
+    Esta función agrega un nuevo análisis
+    al historial del proyecto.
 
-    Entradas:
+    La información se almacena dentro
+    del archivo history.json.
+
+    Input:
         result -> Resultado completo del analisis actual.
 
-    Salida:
-        Ruta del archivo JSON donde se guardo el historial.
+    Output:
+        - Ruta del archivo JSON donde se guardó el historial.
 
-    Restricciones:
-        Los valores propios se convierten a float para poder escribirse en JSON.
+    Restrictions:
+        - Los valores propios se convierten a float para poder escribirse en JSON.
     """
+        # Creación de carpetas.
     ensure_output_dirs()
+
+    # Ruta del archivo hiatorial.
     path = MATRICES_DIR / "history.json"
     if path.exists():
         entries = json.loads(path.read_text(encoding="utf-8"))
