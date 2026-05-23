@@ -1,6 +1,6 @@
 """
 =========================================================
-MODULO: matrix_input.py
+MODULE: matrix_input.py
 
 DESCRIPTION:
     El módulo que contiene el panel de entrada de datos. Permite seleccionar el tamano
@@ -65,7 +65,7 @@ from src.config.settings import DATA_DIR
 class MatrixInputWidget(QFrame):
     """
     Represents:
-    panel izquierdo donde el usuario ingresa la matriz y controla acciones.
+    Panel izquierdo donde el usuario ingresa la matriz y controla acciones.
 
     Input:
         - parent -> Componente visual padre opcional.
@@ -80,7 +80,7 @@ class MatrixInputWidget(QFrame):
     def __init__(self, parent: QWidget | None = None) -> None:
         """
         Calculate:
-        inicialización del panel de entrada y carga de ejemplos.
+        Inicialización del panel de entrada y carga de ejemplos.
 
         Input:
             - parent -> Componente visual padre opcional.
@@ -102,7 +102,7 @@ class MatrixInputWidget(QFrame):
     def _build_ui(self) -> None:
         """
         Calculate:
-        construcción visual de tabla, botones, selector de ejemplos e historial.
+        Construcción visual de tabla, botones, selector de ejemplos e historial.
 
         Input:
             - No recibe parámetros.
@@ -158,7 +158,7 @@ class MatrixInputWidget(QFrame):
     def _connect_signals(self) -> None:
         """
         Calculate:
-        conexion entre botones, selectores y funciones internas.
+        Conexion entre botones, selectores y funciones internas.
 
         Input:
             - No recibe parametros.
@@ -178,7 +178,7 @@ class MatrixInputWidget(QFrame):
     def _load_examples(self) -> list[dict]:
         """
         Calculate:
-        lectura de matrices de ejemplo desde un archivo JSON.
+        Lectura de matrices de ejemplo desde un archivo JSON.
 
         Input:
             - No recibe parámetros. Usa data/matrix_examples.json.
@@ -198,7 +198,7 @@ class MatrixInputWidget(QFrame):
     def _populate_examples(self) -> None:
         """
         Calculate:
-        llenado del selector de ejemplos.
+        Llenado del selector de ejemplos.
 
         Input:
             - No recibe parámetros. Usa self.examples.
@@ -219,7 +219,7 @@ class MatrixInputWidget(QFrame):
     def _on_size_changed(self) -> None:
         """
         Calculate:
-        cambio del tamaño de la tabla según selección del usuario.
+        Cambio del tamaño de la tabla según selección del usuario.
 
         Input:
             - No recibe parámetros. Lee el índice del selector de tamaño.
@@ -235,7 +235,7 @@ class MatrixInputWidget(QFrame):
     def _resize_matrix(self, size: int) -> None:
         """
         Calculate:
-        redimensionamiento de la tabla de entrada.
+        Redimensionamiento de la tabla de entrada.
 
         Input:
             - size -> Tamaño de la matriz, 2 o 3.
@@ -258,7 +258,7 @@ class MatrixInputWidget(QFrame):
     def _on_example_changed(self) -> None:
         """
         Calculate:
-        carga de un ejemplo seleccionado en la tabla.
+        Carga de un ejemplo seleccionado en la tabla.
 
         Input:
             - No recibe parámetros. Lee el ejemplo actual del QComboBox.
@@ -283,7 +283,7 @@ class MatrixInputWidget(QFrame):
     def read_matrix(self) -> np.ndarray:
         """
         Calculate:
-        conversión de las celdas de la tabla en una matriz de NumPy.
+        Conversión de las celdas de la tabla en una matriz de NumPy.
 
         Fórmula usada:
         matrix[row][col] = float(texto_de_celda)
@@ -312,7 +312,7 @@ class MatrixInputWidget(QFrame):
     def _emit_analysis(self) -> None:
         """
         Calculate:
-        emisión de la matriz capturada hacia la ventana principal.
+        Emisión de la matriz capturada hacia la ventana principal.
 
         Input:
             - No recibe parámetros. Usa read_matrix().
@@ -328,7 +328,7 @@ class MatrixInputWidget(QFrame):
     def clear_matrix(self) -> None:
         """
         Calculate:
-        limpieza de la tabla de entrada.
+        Limpieza de la tabla de entrada.
 
         Fórmula usada:
         cada celda visible = 0
@@ -349,7 +349,7 @@ class MatrixInputWidget(QFrame):
     def add_history_item(self, label: str) -> None:
         """
         Calculate:
-        adición visual de un registro al historial.
+        Adición visual de un registro al historial.
 
         Input:
             - label -> Texto con fecha, determinante y riesgo.
