@@ -10,10 +10,10 @@ PURPOSE:
     estabilidad e interpretación.
 
 INPUT:
-    No recibe entradas.
+    - No recibe entradas.
 
 OUTPUT:
-    Paquete de análisis disponible para importación.
+    - Paquete de análisis disponible para importación.
 
 TOPICS RELATED TO THIS SCRIPT:
     - Modularidad
