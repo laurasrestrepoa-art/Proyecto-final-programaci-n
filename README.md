@@ -63,7 +63,7 @@ python -m unittest discover tests
 ```
 
 
-## Notas importantes
+## Nota importante
 
 Este proyecto es academico. La interpretacion estructural es una aproximacion
 educativa basada en propiedades matriciales, no reemplaza un calculo profesional
