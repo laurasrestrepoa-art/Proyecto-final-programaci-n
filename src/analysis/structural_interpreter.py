@@ -1,6 +1,6 @@
 """
 ========================================
-MODULO: structural_interpreter.py
+MODULE: structural_interpreter.py
 
 DESCRIPTION:
    Este módulo genera una interpretación escrita del análisis estructural a partir del determinante, 
@@ -20,7 +20,7 @@ INPUT:
 OUTPUT:
     - Texto en español con interpretación matemática e ingenieril.
 
-TOPICS RELATED TO THIS MODULO:
+TOPICS RELATED TO THIS MODULE:
     - Interpretación de resultados
     - Análisis estructural matricial
     - Modos de deformación
@@ -57,7 +57,7 @@ def interpret_structure(
 ) -> str:
     """
     Calculate:
-    texto interpretativo a partir de reglas de análisis:
+    Texto interpretativo a partir de reglas de análisis:
     - det(A) cercano a 0 indica posible singularidad.
     - lambda positivos sugieren estabilidad.
     - lambda negativos sugieren modo critico.
