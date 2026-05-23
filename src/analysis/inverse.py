@@ -16,7 +16,7 @@ PURPOSE:
     de singularidad o falta de restricciones
     en el sistema.
 
-INPUTS:
+INPUT:
     - Matriz cuadrada de NumPy denominada matrix.
 
 OUTPUT:
@@ -66,10 +66,10 @@ def calculate_inverse(matrix: np.ndarray) -> np.ndarray | None:
         A^-1 -> Matriz inversa.
         I -> Matriz identidad.
 
-    Inputs:
+    Input:
         matrix -> Matriz cuadrada A.
 
-     Outputs:
+     Output:
         - Matriz inversa si existe.
         - Valor None si la matriz es singular.
 
