@@ -1,24 +1,35 @@
 """
+=========================================================
 MODULO: storage/__init__.py
 
-DESCRIPCION:
-Archivo que identifica la carpeta storage como paquete de guardado y exportacion.
+DESCRIPTION:
+    Archivo que identifica la carpeta storage como paquete de guardado y exportación.
 
-PROPOSITO:
-Agrupar funciones para guardar historial, imagenes y reportes PDF.
+PURPOSE:
+    Agrupar funciones para guardar historial, imagenes y reportes PDF.
 
-ENTRADAS:
-No recibe entradas.
+INPUT:
+    - No recibe entradas.
 
-SALIDAS:
-Paquete de almacenamiento disponible para importacion.
+OUTPUT:
+    - Paquete de almacenamiento disponible para importación.
 
-TEMAS RELACIONADOS CON ESTE EJEMPLO:
-- Exportacion de archivos
-- Historial
-- Reportes
+TOPICS RELATED TO THIS MODULO:
+  - Exportación de archivos
+  - Historial
+  - Reportes
 
-AUTORES:
-Isabella Mejía Urueña
-Laura Sofía Restrepo Ardila
+AUTHORS:
+    Isabella Mejía Urueña
+    Laura Sofía Restrepo Ardila
+
+VERSION:
+    3.0
+
+CREATION DATE:
+    2026-05-15
+
+LAST UPDATE: 
+    2026-05-23
+=========================================================
 """
