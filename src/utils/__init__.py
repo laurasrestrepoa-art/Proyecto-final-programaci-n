@@ -18,6 +18,7 @@ TEMAS RELACIONADOS CON ESTE EJEMPLO:
 - Validaciones
 - Formato de salida
 
-AUTOR:
-Laura y equipo de trabajo
+AUTORES:
+Isabella Mejía Urueña
+Laura Sofía Restrepo Ardila
 """
