@@ -1,44 +1,5 @@
 """
 =========================================================
-MODULO: graph_view.py
-
-DESCRIPTION:
-    Este módulo crea el panel gráfico de la interfaz. Muestra las gráficas del
-    análisis en pestañas: estructura, mapa de calor, vectores y modos.
-
-PURPOSE:
-    Integrar las figuras de Matplotlib dentro de la ventana PyQt6 sin mezclar el
-    codigo visual con los calculos matematicos.
-
-INPUT:
-    - result -> Objeto AnalysisResult generado por el análisis.
-    - widget -> Elemento gráfico que se desea ubicar dentro de una pestaña.
-
-OUTPUT:
-    - Panel QTabWidget con gráficas actualizadas.
-
-TOPICS RELATED TO THIS MODULE:
-    - Interfaz gráfica
-    - Pestañas
-    - Integración Matplotlib y PyQt6
-    - Visualización de resultados
-
-AUTHORS:
-    Isabella Mejía Urueña
-    Laura Sofía Restrepo Ardila
-
-VERSION:
-    3.0
-
-CREATION DATE:
-    2026-05-15
-
-LAST UPDATE: 
-    2026-05-23
-=========================================================
-"""
-"""
-=========================================================
 MODULO: main_window.py
 
 DESCRIPTION:
