@@ -75,5 +75,11 @@ src
 data
 docs
 ```
-Si estás en una carpeta antes de esa, los comandos no van a funcionar. Una forma fácil es abrir esa carpeta en el Explorador, hacer clic en la barra de dirección, escribir `cmd` y presionar Enter.
+Si se encuentra en una carpeta anterior a esa, los comandos no funcionarán correctamente.
 
+Para entrar desde `cmd`, use el comando `cd /d` seguido de la ruta de la carpeta. Por ejemplo:
+
+```cmd
+cd /d "C:\Users\LAURA\Desktop\Proyecto-final-programaci-n-main"
+```
+También puede hacerlo de una forma más sencilla: abra la carpeta correcta en el Explorador de archivos, haga clic en la barra de dirección, escriba `cmd` y presione Enter. Esto abrirá la terminal directamente en esa ubicación.
