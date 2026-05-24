@@ -66,7 +66,7 @@ Este proyecto fue creado con fines académicos, por tal razón la interpretació
 estructural es una aproximación basada en propiedades matriciales y demás temas
 vistos en el álgebra lineal.
 
-Importante: cuando descargues desde GitHub, debes entrar a la carpeta descomprimida que contiene directamente:
+Importante: cuando descargue desde GitHub, debe entrar a la carpeta descomprimida que contiene directamente:
 
 ```text
 main.py
