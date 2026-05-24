@@ -42,21 +42,38 @@ StructuraLab/
 
 ## Instalación:
 
-Después de descargar y descomprimir el proyecto, abra `cmd` en la carpeta principal del proyecto y ejecute:
+Después de descargar y descomprimir el proyecto, abra `cmd` en la carpeta principal del proyecto, es decir, en la carpeta donde se encuentra el archivo `main.py`.
 
 ```cmd
-pip install -r requirements.txt
+py -m pip install -r requirements.txt
 ```
 
 ## Ejecución
 
+```cmd
+py main.py
+```
+
+Si el comando `py ` no funciona, puede intentar con:
 ```cmd
 python main.py
 ```
 
 
 
-### Nota Importante:
+### Notas Importantes:
 Este proyecto fue creado con fines académicos, por tal razón la interpretación 
 estructural es una aproximación basada en propiedades matriciales y demás temas
 vistos en el álgebra lineal.
+
+Importante: cuando descargues desde GitHub, debes entrar a la carpeta descomprimida que contiene directamente:
+
+```text
+main.py
+requirements.txt
+src
+data
+docs
+```
+Si estás en una carpeta antes de esa, los comandos no van a funcionar. Una forma fácil es abrir esa carpeta en el Explorador, hacer clic en la barra de dirección, escribir `cmd` y presionar Enter.
+
